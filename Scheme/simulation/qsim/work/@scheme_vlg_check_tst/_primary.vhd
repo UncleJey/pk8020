@@ -2,16 +2,18 @@ library verilog;
 use verilog.vl_types.all;
 entity Scheme_vlg_check_tst is
     port(
-        out1_25         : in     vl_logic;
-        out2_5          : in     vl_logic;
-        out5            : in     vl_logic;
-        out10           : in     vl_logic;
-        out20           : in     vl_logic;
-        out_LA2         : in     vl_logic;
-        outC0           : in     vl_logic;
-        outC1           : in     vl_logic;
-        outC2           : in     vl_logic;
-        outC3           : in     vl_logic;
+        M1              : in     vl_logic;
+        M1_25           : in     vl_logic;
+        M2              : in     vl_logic;
+        M2_5            : in     vl_logic;
+        M4              : in     vl_logic;
+        M5              : in     vl_logic;
+        M10             : in     vl_logic;
+        M_2_5           : in     vl_logic;
+        nCAS            : in     vl_logic;
+        nF1T            : in     vl_logic;
+        nF2T            : in     vl_logic;
+        nRAS            : in     vl_logic;
         sampler_rx      : in     vl_logic
     );
 end Scheme_vlg_check_tst;

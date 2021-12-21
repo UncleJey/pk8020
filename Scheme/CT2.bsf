@@ -59,18 +59,18 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
-		(pt 0 144)
+		(pt 0 152)
 		(input)
 		(text "E1" (rect 0 0 12 12)(font "Arial" ))
-		(text "1" (rect 21 139 26 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144))
+		(text "1" (rect 21 147 26 159)(font "Arial" ))
+		(line (pt 0 152)(pt 16 152))
 	)
 	(port
-		(pt 0 160)
+		(pt 0 168)
 		(input)
 		(text "E2" (rect 0 0 12 12)(font "Arial" ))
-		(text "2" (rect 21 155 26 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160))
+		(text "2" (rect 21 163 26 175)(font "Arial" ))
+		(line (pt 0 168)(pt 16 168))
 	)
 	(port
 		(pt 0 80)
@@ -89,11 +89,11 @@ applicable agreement for further details.
 		(inversion (text "1" (rect 43 234 48 246)(font "Arial" ))(hex))
 	)
 	(port
-		(pt 0 176)
+		(pt 0 184)
 		(input)
 		(text "notDECR" (rect 0 0 47 12)(font "Arial" ))
-		(text "DECR" (rect 21 171 52 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176))
+		(text "DECR" (rect 21 179 52 191)(font "Arial" ))
+		(line (pt 0 184)(pt 16 184))
 		(inversion (text "1" (rect 67 178 72 190)(font "Arial" ))(hex))
 	)
 	(port
@@ -132,6 +132,7 @@ applicable agreement for further details.
 		(line (pt 144 64)(pt 128 64))
 	)
 	(drawing
+		(text "&EC" (rect 24 128 47 142)(font "Arial" (font_size 8)))
 		(line (pt 16 96)(pt 48 96))
 		(line (pt 16 192)(pt 48 192))
 		(line (pt 16 128)(pt 48 128))

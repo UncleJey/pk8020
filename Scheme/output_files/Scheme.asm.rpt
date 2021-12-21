@@ -1,5 +1,5 @@
 Assembler report for Scheme
-Tue Dec 21 14:31:45 2021
+Tue Dec 21 18:41:28 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Den/Documents/sch/output_files/Scheme.sof
-  6. Assembler Device Options: C:/Users/Den/Documents/sch/output_files/Scheme.pof
+  5. Assembler Device Options: D:/Korvet/pk8020/Scheme/output_files/Scheme.sof
+  6. Assembler Device Options: D:/Korvet/pk8020/Scheme/output_files/Scheme.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Dec 21 14:31:45 2021 ;
+; Assembler Status      ; Successful - Tue Dec 21 18:41:28 2021 ;
 ; Revision Name         ; Scheme                                ;
 ; Top-level Entity Name ; Scheme                                ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+----------------------------------------------------+
-; Assembler Generated Files                          ;
-+----------------------------------------------------+
-; File Name                                          ;
-+----------------------------------------------------+
-; C:/Users/Den/Documents/sch/output_files/Scheme.sof ;
-; C:/Users/Den/Documents/sch/output_files/Scheme.pof ;
-+----------------------------------------------------+
++-------------------------------------------------+
+; Assembler Generated Files                       ;
++-------------------------------------------------+
+; File Name                                       ;
++-------------------------------------------------+
+; D:/Korvet/pk8020/Scheme/output_files/Scheme.sof ;
+; D:/Korvet/pk8020/Scheme/output_files/Scheme.pof ;
++-------------------------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Den/Documents/sch/output_files/Scheme.sof ;
-+----------------+-------------------------------------------------------------+
-; Option         ; Setting                                                     ;
-+----------------+-------------------------------------------------------------+
-; Device         ; EP2C5AF256I8                                                ;
-; JTAG usercode  ; 0x000771F4                                                  ;
-; Checksum       ; 0x000771F4                                                  ;
-+----------------+-------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Device Options: D:/Korvet/pk8020/Scheme/output_files/Scheme.sof ;
++----------------+----------------------------------------------------------+
+; Option         ; Setting                                                  ;
++----------------+----------------------------------------------------------+
+; Device         ; EP2C5AF256I8                                             ;
+; JTAG usercode  ; 0x0007697F                                               ;
+; Checksum       ; 0x0007697F                                               ;
++----------------+----------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Den/Documents/sch/output_files/Scheme.pof ;
-+--------------------+---------------------------------------------------------+
-; Option             ; Setting                                                 ;
-+--------------------+---------------------------------------------------------+
-; Device             ; EPCS4                                                   ;
-; JTAG usercode      ; 0x00000000                                              ;
-; Checksum           ; 0x07525BA1                                              ;
-; Compression Ratio  ; 3                                                       ;
-+--------------------+---------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Device Options: D:/Korvet/pk8020/Scheme/output_files/Scheme.pof ;
++--------------------+------------------------------------------------------+
+; Option             ; Setting                                              ;
++--------------------+------------------------------------------------------+
+; Device             ; EPCS4                                                ;
+; JTAG usercode      ; 0x00000000                                           ;
+; Checksum           ; 0x07529EDD                                           ;
+; Compression Ratio  ; 3                                                    ;
++--------------------+------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 21 14:31:44 2021
+    Info: Processing started: Tue Dec 21 18:41:27 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Scheme -c Scheme
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Tue Dec 21 14:31:45 2021
+    Info: Processing ended: Tue Dec 21 18:41:28 2021
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
