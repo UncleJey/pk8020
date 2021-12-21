@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CT2:D44|Data[3]'
+Slack : -2.175
+TNS   : -13.985
+
+Type  : Slow Model Setup 'MHz_20'
+Slack : -1.138
+TNS   : -2.918
+
+Type  : Slow Model Hold 'MHz_20'
+Slack : -2.516
+TNS   : -4.335
+
+Type  : Slow Model Hold 'CT2:D44|Data[3]'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'MHz_20'
+Slack : -1.941
+TNS   : -7.877
+
+Type  : Slow Model Minimum Pulse Width 'CT2:D44|Data[3]'
+Slack : -0.742
+TNS   : -11.872
+
+Type  : Fast Model Setup 'CT2:D44|Data[3]'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Fast Model Setup 'MHz_20'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast Model Hold 'MHz_20'
+Slack : -1.265
+TNS   : -3.013
+
+Type  : Fast Model Hold 'CT2:D44|Data[3]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'MHz_20'
+Slack : -1.380
+TNS   : -5.380
+
+Type  : Fast Model Minimum Pulse Width 'CT2:D44|Data[3]'
+Slack : -0.500
+TNS   : -8.000
+
+------------------------------------------------------------

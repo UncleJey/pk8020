@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Den\Documents\sch\simulation\qsim
+vCT2
+Z1 !s100 BLM6ca:Q69FF;EO6Y=dX21
+Z2 I3KICYjC>:gVncAQkdYiVQ0
+Z3 Vcm<FA<9>OI>;13a0[RD?11
+Z4 dC:\Users\Den\Documents\sch\simulation\qsim
+Z5 w1640028030
+Z6 8Scheme.vo
+Z7 FScheme.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Scheme.vo|
+Z10 o-work work -O0
+Z11 n@c@t2
+Z12 !s108 1640028030.649000
+Z13 !s107 Scheme.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vCT2_vlg_check_tst
+Z14 ID151BJM7n0mn_ieOM6c732
+Z15 VnWM9Lecd[gUKBo7?mUQ1I1
+R4
+Z16 w1640028029
+Z17 8Scheme.vt
+Z18 FScheme.vt
+L0 75
+R8
+r1
+31
+Z19 !s108 1640028030.701000
+Z20 !s107 Scheme.vt|
+Z21 !s90 -work|work|Scheme.vt|
+R10
+Z22 n@c@t2_vlg_check_tst
+Z23 !s100 Xk2T?RfmZMBj]_OMzdOLL2
+!i10b 1
+!s85 0
+!s101 -O0
+vCT2_vlg_sample_tst
+Z24 !s100 ?Y`m9;g?:aWhQKiAKBPB70
+Z25 I89?SQmeZj_kkDZ^7S096h3
+Z26 V1R?8Zz_hK2TCSI<TGVh<;0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z27 n@c@t2_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vCT2_vlg_vec_tst
+Z28 I=9dXzJ9ldnGK[M>X2@U7Z3
+Z29 VnM74kY5HTeXN>kOLYF[B00
+R4
+R16
+R17
+R18
+Z30 L0 278
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z31 n@c@t2_vlg_vec_tst
+Z32 !s100 ;f6^@c7ZISlOlj4l1e<2h0
+!i10b 1
+!s85 0
+!s101 -O0
+vScheme
+Z33 !s100 U5?B7fagOQLXOWJLU;2om1
+Z34 Id7;PAP1Z@fKhNT03CfTGe0
+Z35 V8eiO6JTkdjn7lQ>bk]:A]2
+R4
+Z36 w1640035454
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z37 n@scheme
+!i10b 1
+!s85 0
+Z38 !s108 1640035454.552000
+R13
+!s101 -O0
+vScheme_vlg_check_tst
+!i10b 1
+Z39 !s100 5DD^jfOLbJTd;]8RGG=hX3
+Z40 I3]FTQMDQXeEoKACFY7hAW0
+Z41 VEB]Gbk@6Mz4`JVkZnbT[n0
+R4
+Z42 w1640035453
+R17
+R18
+L0 65
+R8
+r1
+!s85 0
+31
+Z43 !s108 1640035454.593000
+Z44 !s107 Scheme.vt|
+R21
+!s101 -O0
+R10
+Z45 n@scheme_vlg_check_tst
+vScheme_vlg_sample_tst
+!i10b 1
+Z46 !s100 gWZn95HL8ABE^N7:VfVVU2
+Z47 IE@z;e6TYEJ:@^A0HngQ663
+Z48 VCi3WckCR^<DTb`KGRL00C2
+R4
+R42
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R43
+R44
+R21
+!s101 -O0
+R10
+Z49 n@scheme_vlg_sample_tst
+vScheme_vlg_vec_tst
+!i10b 1
+Z50 !s100 MQdV`Q^]Q@n5C3cF_9Yfe0
+Z51 I[KE^GY:<?R`LIbOE9QbhH2
+Z52 V`Ml1o_ObP8OTzV4<KK:Ih2
+R4
+R42
+R17
+R18
+Z53 L0 403
+R8
+r1
+!s85 0
+31
+R43
+R44
+R21
+!s101 -O0
+R10
+Z54 n@scheme_vlg_vec_tst

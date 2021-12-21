@@ -1,0 +1,143 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 208 304)
+	(text "CT2" (rect 64 8 84 20)(font "Arial" ))
+	(text "inst" (rect 64 208 81 220)(font "Arial" ))
+	(port
+		(pt 0 112)
+		(input)
+		(text "C" (rect 0 0 8 12)(font "Arial" ))
+		(text "C" (rect 21 107 29 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 16)
+		(input)
+		(text "D0" (rect 0 0 14 12)(font "Arial" ))
+		(text "1" (rect 29 11 34 23)(font "Arial" ))
+		(line (pt 0 16)(pt 16 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "D1" (rect 0 0 14 12)(font "Arial" ))
+		(text "2" (rect 29 27 34 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "D2" (rect 0 0 14 12)(font "Arial" ))
+		(text "4" (rect 29 43 34 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "D3" (rect 0 0 14 12)(font "Arial" ))
+		(text "8" (rect 29 59 34 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "E1" (rect 0 0 12 12)(font "Arial" ))
+		(text "1" (rect 21 139 26 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "E2" (rect 0 0 12 12)(font "Arial" ))
+		(text "2" (rect 21 155 26 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "notEWR" (rect 0 0 41 12)(font "Arial" ))
+		(text "EWR" (rect 21 75 46 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+		(inversion (text "1" (rect 61 74 66 86)(font "Arial" ))(hex))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "notR" (rect 0 0 23 12)(font "Arial" ))
+		(text "R" (rect 21 203 29 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208))
+		(inversion (text "1" (rect 43 234 48 246)(font "Arial" ))(hex))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "notDECR" (rect 0 0 47 12)(font "Arial" ))
+		(text "DECR" (rect 21 171 52 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176))
+		(inversion (text "1" (rect 67 178 72 190)(font "Arial" ))(hex))
+	)
+	(port
+		(pt 144 192)
+		(output)
+		(text "CR" (rect -24 0 -8 12)(font "Arial" ))
+		(text "CR" (rect 110 187 126 199)(font "Arial" ))
+		(line (pt 144 192)(pt 128 192))
+	)
+	(port
+		(pt 144 16)
+		(output)
+		(text "OUT0" (rect -24 0 4 12)(font "Arial" ))
+		(text "1" (rect 108 11 113 23)(font "Arial" ))
+		(line (pt 144 16)(pt 128 16))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "OUT1" (rect -24 0 4 12)(font "Arial" ))
+		(text "2" (rect 108 27 113 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "OUT2" (rect -24 0 4 12)(font "Arial" ))
+		(text "4" (rect 108 43 113 55)(font "Arial" ))
+		(line (pt 144 48)(pt 128 48))
+	)
+	(port
+		(pt 144 64)
+		(output)
+		(text "OUT3" (rect -24 0 4 12)(font "Arial" ))
+		(text "8" (rect 108 59 113 71)(font "Arial" ))
+		(line (pt 144 64)(pt 128 64))
+	)
+	(drawing
+		(line (pt 16 96)(pt 48 96))
+		(line (pt 16 192)(pt 48 192))
+		(line (pt 16 128)(pt 48 128))
+		(line (pt 8 120)(pt 24 104))
+		(line (pt 48 1)(pt 48 223))
+		(line (pt 96 1)(pt 96 222))
+		(rectangle (rect 16 0 128 224))
+	)
+)

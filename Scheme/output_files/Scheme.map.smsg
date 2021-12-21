@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at T.v(3): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at CT2.v(10): always construct contains both blocking and non-blocking assignments

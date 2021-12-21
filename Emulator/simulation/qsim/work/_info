@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Den\Documents\test\simulation\qsim
+vtest
+Z1 IYOLiD`zcX;`A5]W6KkMoB1
+Z2 V3l28gf`PRFJm>DhR8BBl00
+Z3 dC:\Users\Den\Documents\test\simulation\qsim
+Z4 w1639852794
+Z5 8test.vo
+Z6 Ftest.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|test.vo|
+Z9 o-work work -O0
+Z10 !s100 J^QB73Zle<G=m2SGNkZ@h0
+Z11 !s108 1639852794.802000
+Z12 !s107 test.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_check_tst
+Z13 !s100 MeNCCUdeI;2V2S]BRPN6:3
+Z14 IU^NnHHM_oXS6=UZ27`_:53
+Z15 V<Rb5@>5]>@llGKj2?2d=J1
+R3
+Z16 w1639852793
+Z17 8test.vt
+Z18 Ftest.vt
+L0 61
+R7
+r1
+31
+Z19 !s108 1639852794.848000
+Z20 !s107 test.vt|
+Z21 !s90 -work|work|test.vt|
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_sample_tst
+Z22 !s100 f6Pd:O<6LD68@aH5N>60V0
+Z23 IoVhSJdQ?fU55kRI8_jNmb3
+Z24 VjDB5Q34ccW;ze8DUD<M][3
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+31
+R19
+R20
+R21
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_vlg_vec_tst
+Z25 I[E8Jz8VK<m[hfY3zOJ[@S2
+Z26 Va5b;6:2=HDheAU5FQATGI3
+R3
+R16
+R17
+R18
+Z27 L0 245
+R7
+r1
+31
+R19
+R20
+R21
+R9
+Z28 !s100 a2iLdh]FheCEjmUOZhUg11
+!i10b 1
+!s85 0
+!s101 -O0
+vTRG
+Z29 ISglNo_8kZE>HO^]=UR3hz3
+Z30 Vf]fC6R<>gHPe7K7IE7KNc2
+R3
+Z31 w1640024829
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z32 n@t@r@g
+!i10b 1
+Z33 !s100 LdiB[b:n?f@DW90gY^M[:3
+!s85 0
+Z34 !s108 1640024829.921000
+R12
+!s101 -O0
+vTRG_vlg_check_tst
+!i10b 1
+Z35 !s100 ai3YolVEMLC1W;72I58:H2
+Z36 IjPL0T0HCN9GeLjcI5JnDG3
+Z37 V=lWcdC?X@ieGLfXMQRDi<0
+R3
+R31
+R17
+R18
+L0 63
+R7
+r1
+!s85 0
+31
+Z38 !s108 1640024829.969000
+Z39 !s107 test.vt|
+R21
+!s101 -O0
+R9
+Z40 n@t@r@g_vlg_check_tst
+vTRG_vlg_sample_tst
+!i10b 1
+Z41 !s100 3c2j6Q26LWh??WSF_n_3F3
+Z42 Id8;D<NBjNBhzHAoQ_<<?>3
+Z43 V76g4jJQn]RZE_P7KSLO_T1
+R3
+R31
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R9
+Z44 n@t@r@g_vlg_sample_tst
+vTRG_vlg_vec_tst
+!i10b 1
+Z45 !s100 QfgVojieeBKaJH3cY?`Z81
+Z46 Il]gUTjB733FZ5T8NEbb=W2
+Z47 V`T_f>ES0BlfAV<OKnz4>10
+R3
+R31
+R17
+R18
+Z48 L0 185
+R7
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R9
+Z49 n@t@r@g_vlg_vec_tst

@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 56 56 192 296)
+	(text "MX" (rect 64 8 81 22)(font "Arial" (font_size 8)))
+	(text "inst" (rect 16 216 33 228)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "i1" (rect 0 8 9 22)(font "Arial" (font_size 8)))
+		(text "i1" (rect 21 35 30 49)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "i2" (rect 0 8 9 22)(font "Arial" (font_size 8)))
+		(text "i2" (rect 21 51 30 65)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "i4" (rect 0 8 9 22)(font "Arial" (font_size 8)))
+		(text "i4" (rect 21 67 30 81)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "i8" (rect 0 8 9 22)(font "Arial" (font_size 8)))
+		(text "i8" (rect 21 83 30 97)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "EWR" (rect 0 8 27 22)(font "Arial" (font_size 8)))
+		(text "EWR" (rect 21 99 48 113)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "C" (rect 0 8 8 22)(font "Arial" (font_size 8)))
+		(text "C" (rect 21 115 29 129)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "E1" (rect 0 8 14 22)(font "Arial" (font_size 8)))
+		(text "E1" (rect 21 131 35 145)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 16 136))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "E2" (rect 0 8 14 22)(font "Arial" (font_size 8)))
+		(text "E2" (rect 21 147 35 161)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 16 152))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "DECR" (rect 0 8 31 22)(font "Arial" (font_size 8)))
+		(text "DECR" (rect 21 163 52 177)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 16 168))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "R" (rect 0 8 8 22)(font "Arial" (font_size 8)))
+		(text "R" (rect 21 179 29 193)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 16 184))
+	)
+	(port
+		(pt 136 40)
+		(output)
+		(text "1" (rect 40 8 47 22)(font "Arial" (font_size 8)))
+		(text "1" (rect 108 35 115 49)(font "Arial" (font_size 8)))
+		(line (pt 136 40)(pt 120 40))
+	)
+	(port
+		(pt 136 56)
+		(output)
+		(text "2" (rect 40 8 47 22)(font "Arial" (font_size 8)))
+		(text "2" (rect 108 51 115 65)(font "Arial" (font_size 8)))
+		(line (pt 136 56)(pt 120 56))
+	)
+	(port
+		(pt 136 72)
+		(output)
+		(text "4" (rect 40 8 47 22)(font "Arial" (font_size 8)))
+		(text "4" (rect 108 67 115 81)(font "Arial" (font_size 8)))
+		(line (pt 136 72)(pt 120 72))
+	)
+	(port
+		(pt 136 88)
+		(output)
+		(text "8" (rect 40 8 47 22)(font "Arial" (font_size 8)))
+		(text "8" (rect 108 83 115 97)(font "Arial" (font_size 8)))
+		(line (pt 136 88)(pt 120 88))
+	)
+	(port
+		(pt 136 104)
+		(output)
+		(text "CR" (rect 40 8 56 22)(font "Arial" (font_size 8)))
+		(text "CR" (rect 99 99 115 113)(font "Arial" (font_size 8)))
+		(line (pt 136 104)(pt 120 104))
+	)
+	(drawing
+		(rectangle (rect 16 40 120 232))
+	)
+)

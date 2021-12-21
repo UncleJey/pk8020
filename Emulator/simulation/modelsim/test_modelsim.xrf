@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Den/Documents/test/test.v
+source_file = 1, C:/Users/Den/Documents/test/output_files/Waveform.vwf
+source_file = 1, C:/Users/Den/Documents/test/TRG.v
+source_file = 1, C:/Users/Den/Documents/test/db/test.cbx.xml
+design_name = TRG
+instance = comp, \D~I , D, TRG, 1
+instance = comp, \C~I , C, TRG, 1
+instance = comp, \S~I , S, TRG, 1
+instance = comp, \R~I , R, TRG, 1
+instance = comp, \RF~0 , RF~0, TRG, 1
+instance = comp, \RF~reg0 , RF~reg0, TRG, 1
+instance = comp, \RF~I , RF, TRG, 1
+instance = comp, \RI~I , RI, TRG, 1

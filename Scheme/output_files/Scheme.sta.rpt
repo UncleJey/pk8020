@@ -1,0 +1,980 @@
+TimeQuest Timing Analyzer report for Scheme
+Tue Dec 21 14:31:46 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CT2:D44|Data[3]'
+ 12. Slow Model Setup: 'MHz_20'
+ 13. Slow Model Hold: 'MHz_20'
+ 14. Slow Model Hold: 'CT2:D44|Data[3]'
+ 15. Slow Model Minimum Pulse Width: 'MHz_20'
+ 16. Slow Model Minimum Pulse Width: 'CT2:D44|Data[3]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'CT2:D44|Data[3]'
+ 27. Fast Model Setup: 'MHz_20'
+ 28. Fast Model Hold: 'MHz_20'
+ 29. Fast Model Hold: 'CT2:D44|Data[3]'
+ 30. Fast Model Minimum Pulse Width: 'MHz_20'
+ 31. Fast Model Minimum Pulse Width: 'CT2:D44|Data[3]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Scheme                                                            ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5AF256I8                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; CT2:D44|Data[3] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CT2:D44|Data[3] } ;
+; MHz_20          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { MHz_20 }          ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                        ;
++------------+-----------------+-----------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note                                                          ;
++------------+-----------------+-----------------+---------------------------------------------------------------+
+; 314.96 MHz ; 314.96 MHz      ; CT2:D44|Data[3] ;                                                               ;
+; 467.73 MHz ; 340.02 MHz      ; MHz_20          ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-----------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------+
+; Slow Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CT2:D44|Data[3] ; -2.175 ; -13.985       ;
+; MHz_20          ; -1.138 ; -2.918        ;
++-----------------+--------+---------------+
+
+
++------------------------------------------+
+; Slow Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; MHz_20          ; -2.516 ; -4.335        ;
+; CT2:D44|Data[3] ; 0.499  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Slow Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; MHz_20          ; -1.941 ; -7.877        ;
+; CT2:D44|Data[3] ; -0.742 ; -11.872       ;
++-----------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CT2:D44|Data[3]'                                                                                     ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; -2.175 ; CT2:D46|Data[2] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 3.215      ;
+; -2.026 ; CT2:D45|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 3.066      ;
+; -1.904 ; CT2:D45|CR      ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.944      ;
+; -1.845 ; CT2:D46|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.885      ;
+; -1.815 ; CT2:D45|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.855      ;
+; -1.814 ; CT2:D45|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.854      ;
+; -1.814 ; CT2:D45|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.854      ;
+; -1.810 ; CT2:D45|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.850      ;
+; -1.810 ; CT2:D45|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.850      ;
+; -1.759 ; CT2:D46|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.799      ;
+; -1.743 ; CT2:D46|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.783      ;
+; -1.725 ; CT2:D45|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.765      ;
+; -1.725 ; CT2:D45|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.765      ;
+; -1.721 ; CT2:D45|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.761      ;
+; -1.601 ; CT2:D45|Data[1] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.641      ;
+; -1.600 ; CT2:D45|Data[1] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.640      ;
+; -1.600 ; CT2:D45|Data[1] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.640      ;
+; -1.599 ; CT2:D46|Data[2] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.639      ;
+; -1.599 ; CT2:D46|Data[2] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.639      ;
+; -1.597 ; CT2:D46|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.637      ;
+; -1.596 ; CT2:D46|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.636      ;
+; -1.596 ; CT2:D45|Data[1] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.636      ;
+; -1.592 ; CT2:D46|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.632      ;
+; -1.587 ; CT2:D45|Data[3] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.627      ;
+; -1.564 ; CT2:D46|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.604      ;
+; -1.450 ; CT2:D45|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.490      ;
+; -1.450 ; CT2:D45|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.490      ;
+; -1.429 ; CT2:D46|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.469      ;
+; -1.364 ; CT2:D46|Data[1] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.404      ;
+; -1.328 ; CT2:D45|CR      ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.368      ;
+; -1.328 ; CT2:D45|CR      ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.368      ;
+; -1.315 ; CT2:D46|Data[1] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.355      ;
+; -1.269 ; CT2:D46|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.309      ;
+; -1.266 ; CT2:D46|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.306      ;
+; -1.262 ; CT2:D46|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.302      ;
+; -1.215 ; CT2:D45|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.255      ;
+; -1.127 ; CT2:D45|Data[3] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.167      ;
+; -1.126 ; CT2:D45|Data[3] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.166      ;
+; -1.126 ; CT2:D45|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.166      ;
+; -1.122 ; CT2:D45|Data[3] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.162      ;
+; -1.001 ; CT2:D45|Data[1] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.041      ;
+; -0.991 ; CT2:D46|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 2.031      ;
+; -0.661 ; CT2:D46|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 1.701      ;
+; -0.522 ; CT2:D45|Data[3] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 1.562      ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'MHz_20'                                                                                          ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; -1.138 ; CT2:D44|Data[1] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 2.178      ;
+; -1.020 ; CT2:D44|Data[2] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 2.060      ;
+; -1.017 ; CT2:D44|Data[2] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 2.057      ;
+; -0.969 ; CT2:D44|Data[0] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 2.009      ;
+; -0.774 ; CT2:D44|Data[1] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 1.814      ;
+; -0.760 ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 1.800      ;
+; -0.747 ; CT2:D44|Data[0] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 1.787      ;
+; -0.591 ; CT2:D44|Data[0] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 1.631      ;
+; -0.444 ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 1.484      ;
+; 0.235  ; CT2:D44|Data[0] ; CT2:D44|Data[0] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.805      ;
+; 1.142  ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 2.711      ; 2.413      ;
+; 1.145  ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 2.711      ; 2.410      ;
+; 1.642  ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 2.711      ; 2.413      ;
+; 1.645  ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 2.711      ; 2.410      ;
+; 2.750  ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 2.711      ; 0.805      ;
+; 3.250  ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 2.711      ; 0.805      ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'MHz_20'                                                                                           ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; -2.516 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 2.711      ; 0.805      ;
+; -2.016 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 2.711      ; 0.805      ;
+; -0.911 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 2.711      ; 2.410      ;
+; -0.908 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 2.711      ; 2.413      ;
+; -0.411 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 2.711      ; 2.410      ;
+; -0.408 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 2.711      ; 2.413      ;
+; 0.499  ; CT2:D44|Data[0] ; CT2:D44|Data[0] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499  ; CT2:D44|Data[2] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499  ; CT2:D44|Data[1] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.805      ;
+; 1.178  ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.484      ;
+; 1.325  ; CT2:D44|Data[0] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.631      ;
+; 1.328  ; CT2:D44|Data[0] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.634      ;
+; 1.331  ; CT2:D44|Data[0] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.637      ;
+; 1.494  ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.800      ;
+; 1.505  ; CT2:D44|Data[1] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 1.811      ;
+; 1.754  ; CT2:D44|Data[2] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 2.060      ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CT2:D44|Data[3]'                                                                                     ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; 0.499 ; CT2:D46|Data[1] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; CT2:D46|Data[2] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; CT2:D46|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; CT2:D45|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.805      ;
+; 1.256 ; CT2:D45|Data[3] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 1.562      ;
+; 1.395 ; CT2:D46|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 1.701      ;
+; 1.576 ; CT2:D45|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 1.882      ;
+; 1.725 ; CT2:D46|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.031      ;
+; 1.735 ; CT2:D45|Data[1] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.041      ;
+; 1.800 ; CT2:D46|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.106      ;
+; 1.809 ; CT2:D46|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.115      ;
+; 1.812 ; CT2:D46|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.118      ;
+; 1.812 ; CT2:D46|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.118      ;
+; 1.813 ; CT2:D46|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.119      ;
+; 1.856 ; CT2:D45|Data[3] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.162      ;
+; 1.860 ; CT2:D45|Data[3] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.166      ;
+; 1.860 ; CT2:D45|Data[3] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.166      ;
+; 1.861 ; CT2:D45|Data[3] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.167      ;
+; 1.949 ; CT2:D45|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.255      ;
+; 1.964 ; CT2:D45|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.270      ;
+; 1.991 ; CT2:D45|Data[1] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.297      ;
+; 1.995 ; CT2:D45|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.301      ;
+; 1.995 ; CT2:D45|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.301      ;
+; 1.996 ; CT2:D45|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.302      ;
+; 1.996 ; CT2:D45|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.302      ;
+; 1.997 ; CT2:D45|Data[1] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.303      ;
+; 2.003 ; CT2:D46|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.309      ;
+; 2.013 ; CT2:D45|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.319      ;
+; 2.020 ; CT2:D45|Data[1] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.326      ;
+; 2.049 ; CT2:D46|Data[1] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.355      ;
+; 2.062 ; CT2:D45|CR      ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.368      ;
+; 2.062 ; CT2:D45|CR      ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.368      ;
+; 2.112 ; CT2:D46|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.418      ;
+; 2.142 ; CT2:D46|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.448      ;
+; 2.145 ; CT2:D46|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.145 ; CT2:D46|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.451      ;
+; 2.146 ; CT2:D46|Data[2] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.452      ;
+; 2.271 ; CT2:D45|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.577      ;
+; 2.330 ; CT2:D45|Data[1] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.636      ;
+; 2.429 ; CT2:D45|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.735      ;
+; 2.544 ; CT2:D45|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.850      ;
+; 2.549 ; CT2:D45|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.855      ;
+; 2.578 ; CT2:D46|Data[2] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.884      ;
+; 2.638 ; CT2:D45|CR      ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 2.944      ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'MHz_20'                                                                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; MHz_20 ; Rise       ; MHz_20                  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[0]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[0]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[1]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[1]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[2]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[2]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[3]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CT2:D44|Data[3]'                                                                       ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|CR                   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|CR                   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[0]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[0]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[1]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[1]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[2]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[2]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[3]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[3]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[0]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[0]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[1]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[1]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[2]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[2]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|CR|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|CR|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[2]|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; 6.510 ; 6.510 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; 6.295 ; 6.295 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; 5.008 ; 5.008 ; Rise       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; -5.065 ; -5.065 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; -5.250 ; -5.250 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; -3.869 ; -3.869 ; Rise       ; MHz_20          ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 4.158 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 7.081 ; 7.081 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 7.083 ; 7.083 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 7.205 ; 7.205 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 7.143 ; 7.143 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 8.041 ; 8.041 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 4.158 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 7.218 ; 7.218 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 7.181 ; 7.181 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 7.533 ; 7.533 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 4.158 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 7.081 ; 7.081 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 7.083 ; 7.083 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 7.205 ; 7.205 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 7.143 ; 7.143 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 7.711 ; 7.711 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 4.158 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 7.218 ; 7.218 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 7.181 ; 7.181 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 7.533 ; 7.533 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------+
+; Fast Model Setup Summary                 ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; CT2:D44|Data[3] ; -0.001 ; -0.001        ;
+; MHz_20          ; 0.307  ; 0.000         ;
++-----------------+--------+---------------+
+
+
++------------------------------------------+
+; Fast Model Hold Summary                  ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; MHz_20          ; -1.265 ; -3.013        ;
+; CT2:D44|Data[3] ; 0.203  ; 0.000         ;
++-----------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------+
+; Fast Model Minimum Pulse Width Summary   ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; MHz_20          ; -1.380 ; -5.380        ;
+; CT2:D44|Data[3] ; -0.500 ; -8.000        ;
++-----------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CT2:D44|Data[3]'                                                                                     ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; -0.001 ; CT2:D46|Data[2] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 1.031      ;
+; 0.048  ; CT2:D45|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.982      ;
+; 0.098  ; CT2:D45|CR      ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.932      ;
+; 0.123  ; CT2:D46|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.907      ;
+; 0.127  ; CT2:D45|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.903      ;
+; 0.127  ; CT2:D45|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.903      ;
+; 0.128  ; CT2:D45|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.902      ;
+; 0.132  ; CT2:D45|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.898      ;
+; 0.134  ; CT2:D46|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.896      ;
+; 0.163  ; CT2:D46|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.867      ;
+; 0.163  ; CT2:D46|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.867      ;
+; 0.164  ; CT2:D45|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.866      ;
+; 0.165  ; CT2:D46|Data[2] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.865      ;
+; 0.165  ; CT2:D46|Data[2] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.865      ;
+; 0.168  ; CT2:D45|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.862      ;
+; 0.168  ; CT2:D46|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.862      ;
+; 0.169  ; CT2:D45|Data[1] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.861      ;
+; 0.169  ; CT2:D45|Data[1] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.861      ;
+; 0.169  ; CT2:D45|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.861      ;
+; 0.170  ; CT2:D45|Data[1] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.860      ;
+; 0.173  ; CT2:D45|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.857      ;
+; 0.174  ; CT2:D45|Data[1] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.856      ;
+; 0.183  ; CT2:D46|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.847      ;
+; 0.214  ; CT2:D45|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.816      ;
+; 0.214  ; CT2:D45|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.816      ;
+; 0.222  ; CT2:D45|Data[3] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.808      ;
+; 0.234  ; CT2:D46|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.796      ;
+; 0.258  ; CT2:D46|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.772      ;
+; 0.264  ; CT2:D45|CR      ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.766      ;
+; 0.264  ; CT2:D45|CR      ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.766      ;
+; 0.273  ; CT2:D45|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.757      ;
+; 0.287  ; CT2:D46|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.743      ;
+; 0.289  ; CT2:D46|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.741      ;
+; 0.291  ; CT2:D46|Data[1] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.739      ;
+; 0.292  ; CT2:D46|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.738      ;
+; 0.299  ; CT2:D46|Data[1] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.731      ;
+; 0.314  ; CT2:D45|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.716      ;
+; 0.315  ; CT2:D45|Data[1] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.715      ;
+; 0.337  ; CT2:D46|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.693      ;
+; 0.339  ; CT2:D45|Data[3] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.691      ;
+; 0.340  ; CT2:D45|Data[3] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.690      ;
+; 0.344  ; CT2:D45|Data[3] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.686      ;
+; 0.461  ; CT2:D46|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.569      ;
+; 0.509  ; CT2:D45|Data[3] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 1.000        ; 0.000      ; 0.521      ;
++--------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'MHz_20'                                                                                         ;
++-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; 0.307 ; CT2:D44|Data[1] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.723      ;
+; 0.379 ; CT2:D44|Data[2] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.651      ;
+; 0.379 ; CT2:D44|Data[0] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.651      ;
+; 0.381 ; CT2:D44|Data[2] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.649      ;
+; 0.421 ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.609      ;
+; 0.441 ; CT2:D44|Data[1] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.589      ;
+; 0.452 ; CT2:D44|Data[0] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.578      ;
+; 0.493 ; CT2:D44|Data[0] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.537      ;
+; 0.537 ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.493      ;
+; 0.679 ; CT2:D44|Data[0] ; CT2:D44|Data[0] ; MHz_20          ; MHz_20      ; 1.000        ; 0.000      ; 0.351      ;
+; 1.255 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 1.333      ; 0.743      ;
+; 1.257 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 1.333      ; 0.741      ;
+; 1.647 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 0.500        ; 1.333      ; 0.351      ;
+; 1.755 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 1.333      ; 0.743      ;
+; 1.757 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 1.333      ; 0.741      ;
+; 2.147 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 1.000        ; 1.333      ; 0.351      ;
++-------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'MHz_20'                                                                                           ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node         ; Launch Clock    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+; -1.265 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 1.333      ; 0.351      ;
+; -0.875 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 1.333      ; 0.741      ;
+; -0.873 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; 0.000        ; 1.333      ; 0.743      ;
+; -0.765 ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 1.333      ; 0.351      ;
+; -0.375 ; CT2:D44|Data[3] ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 1.333      ; 0.741      ;
+; -0.373 ; CT2:D44|Data[3] ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20      ; -0.500       ; 1.333      ; 0.743      ;
+; 0.203  ; CT2:D44|Data[0] ; CT2:D44|Data[0] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203  ; CT2:D44|Data[2] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203  ; CT2:D44|Data[1] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.351      ;
+; 0.345  ; CT2:D44|Data[2] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.493      ;
+; 0.389  ; CT2:D44|Data[0] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.537      ;
+; 0.409  ; CT2:D44|Data[0] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.557      ;
+; 0.411  ; CT2:D44|Data[0] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.559      ;
+; 0.439  ; CT2:D44|Data[1] ; CT2:D44|Data[2] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.587      ;
+; 0.461  ; CT2:D44|Data[1] ; CT2:D44|Data[3] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.609      ;
+; 0.503  ; CT2:D44|Data[2] ; CT2:D44|Data[1] ; MHz_20          ; MHz_20      ; 0.000        ; 0.000      ; 0.651      ;
++--------+-----------------+-----------------+-----------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CT2:D44|Data[3]'                                                                                     ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node         ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+; 0.203 ; CT2:D46|Data[1] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; CT2:D46|Data[2] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; CT2:D46|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.351      ;
+; 0.203 ; CT2:D45|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.351      ;
+; 0.373 ; CT2:D45|Data[3] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.421 ; CT2:D46|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.569      ;
+; 0.496 ; CT2:D45|Data[0] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.644      ;
+; 0.513 ; CT2:D46|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.661      ;
+; 0.533 ; CT2:D46|Data[0] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.681      ;
+; 0.537 ; CT2:D46|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.537 ; CT2:D46|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.538 ; CT2:D46|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.538 ; CT2:D45|Data[3] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.686      ;
+; 0.542 ; CT2:D45|Data[3] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.690      ;
+; 0.543 ; CT2:D45|Data[3] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.691      ;
+; 0.543 ; CT2:D45|Data[3] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.691      ;
+; 0.545 ; CT2:D46|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.693      ;
+; 0.567 ; CT2:D45|Data[1] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.715      ;
+; 0.571 ; CT2:D45|Data[1] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.719      ;
+; 0.574 ; CT2:D45|Data[1] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.722      ;
+; 0.576 ; CT2:D45|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.724      ;
+; 0.580 ; CT2:D45|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.728      ;
+; 0.583 ; CT2:D46|Data[1] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.586 ; CT2:D45|Data[1] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.734      ;
+; 0.593 ; CT2:D46|Data[0] ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.741      ;
+; 0.599 ; CT2:D46|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.747      ;
+; 0.609 ; CT2:D45|Data[2] ; CT2:D45|CR      ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.757      ;
+; 0.612 ; CT2:D45|Data[0] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.760      ;
+; 0.613 ; CT2:D45|Data[0] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.761      ;
+; 0.613 ; CT2:D45|Data[0] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.761      ;
+; 0.614 ; CT2:D45|Data[0] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.762      ;
+; 0.618 ; CT2:D45|CR      ; CT2:D46|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.766      ;
+; 0.618 ; CT2:D45|CR      ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.766      ;
+; 0.653 ; CT2:D45|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.801      ;
+; 0.659 ; CT2:D46|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.807      ;
+; 0.662 ; CT2:D46|Data[2] ; CT2:D46|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.810      ;
+; 0.663 ; CT2:D46|Data[2] ; CT2:D45|Data[2] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.811      ;
+; 0.663 ; CT2:D46|Data[2] ; CT2:D45|Data[3] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.811      ;
+; 0.708 ; CT2:D45|Data[1] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.856      ;
+; 0.723 ; CT2:D45|Data[0] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.871      ;
+; 0.750 ; CT2:D45|Data[2] ; CT2:D45|Data[0] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.898      ;
+; 0.755 ; CT2:D45|Data[2] ; CT2:D45|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.903      ;
+; 0.772 ; CT2:D46|Data[2] ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.920      ;
+; 0.784 ; CT2:D45|CR      ; CT2:D46|Data[1] ; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 0.000        ; 0.000      ; 0.932      ;
++-------+-----------------+-----------------+-----------------+-----------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'MHz_20'                                                                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; MHz_20 ; Rise       ; MHz_20                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MHz_20 ; Rise       ; CT2:D44|Data[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; CT2:D44|Data[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; D44|Data[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; D44|Data[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MHz_20 ; Rise       ; MHz_20~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MHz_20 ; Rise       ; MHz_20~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CT2:D44|Data[3]'                                                                       ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock           ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|CR                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|CR                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D45|Data[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; CT2:D46|Data[2]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D44|Data[3]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|CR|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|CR|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D45|Data[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D45|Data[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CT2:D44|Data[3] ; Rise       ; D46|Data[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CT2:D44|Data[3] ; Rise       ; D46|Data[2]|clk              ;
++--------+--------------+----------------+------------------+-----------------+------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; 2.662 ; 2.662 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; 2.610 ; 2.610 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; 2.105 ; 2.105 ; Rise       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; -2.211 ; -2.211 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; -2.258 ; -2.258 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; -1.740 ; -1.740 ; Rise       ; MHz_20          ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 1.702 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 2.996 ; 2.996 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 3.007 ; 3.007 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 3.204 ; 3.204 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 3.155 ; 3.155 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 3.304 ; 3.304 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 1.702 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 3.203 ; 3.203 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 3.182 ; 3.182 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 3.278 ; 3.278 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 1.702 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 2.996 ; 2.996 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 3.007 ; 3.007 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 3.204 ; 3.204 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 3.155 ; 3.155 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 3.180 ; 3.180 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 1.702 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 3.203 ; 3.203 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 3.182 ; 3.182 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 3.278 ; 3.278 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -2.175  ; -2.516 ; N/A      ; N/A     ; -1.941              ;
+;  CT2:D44|Data[3] ; -2.175  ; 0.203  ; N/A      ; N/A     ; -0.742              ;
+;  MHz_20          ; -1.138  ; -2.516 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -16.903 ; -4.335 ; 0.0      ; 0.0     ; -19.749             ;
+;  CT2:D44|Data[3] ; -13.985 ; 0.000  ; N/A      ; N/A     ; -11.872             ;
+;  MHz_20          ; -2.918  ; -4.335 ; N/A      ; N/A     ; -7.877              ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; 6.510 ; 6.510 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; 6.295 ; 6.295 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; 5.008 ; 5.008 ; Rise       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-----------------+--------+--------+------------+-----------------+
+; B1        ; CT2:D44|Data[3] ; -2.211 ; -2.211 ; Rise       ; CT2:D44|Data[3] ;
+; GND       ; CT2:D44|Data[3] ; -2.258 ; -2.258 ; Rise       ; CT2:D44|Data[3] ;
+; B1        ; MHz_20          ; -1.740 ; -1.740 ; Rise       ; MHz_20          ;
++-----------+-----------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 4.158 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 7.081 ; 7.081 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 7.083 ; 7.083 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 7.205 ; 7.205 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 7.143 ; 7.143 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 8.041 ; 8.041 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 4.158 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 7.218 ; 7.218 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 7.181 ; 7.181 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 7.533 ; 7.533 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 5.082 ; 5.082 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port      ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-----------------+-------+-------+------------+-----------------+
+; out1_25   ; CT2:D44|Data[3] ; 1.702 ;       ; Rise       ; CT2:D44|Data[3] ;
+; outC0     ; CT2:D44|Data[3] ; 2.996 ; 2.996 ; Rise       ; CT2:D44|Data[3] ;
+; outC1     ; CT2:D44|Data[3] ; 3.007 ; 3.007 ; Rise       ; CT2:D44|Data[3] ;
+; outC2     ; CT2:D44|Data[3] ; 3.204 ; 3.204 ; Rise       ; CT2:D44|Data[3] ;
+; outC3     ; CT2:D44|Data[3] ; 3.155 ; 3.155 ; Rise       ; CT2:D44|Data[3] ;
+; out_LA2   ; CT2:D44|Data[3] ; 3.180 ; 3.180 ; Rise       ; CT2:D44|Data[3] ;
+; out1_25   ; CT2:D44|Data[3] ;       ; 1.702 ; Fall       ; CT2:D44|Data[3] ;
+; out2_5    ; MHz_20          ; 3.203 ; 3.203 ; Rise       ; MHz_20          ;
+; out5      ; MHz_20          ; 3.182 ; 3.182 ; Rise       ; MHz_20          ;
+; out10     ; MHz_20          ; 3.278 ; 3.278 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Rise       ; MHz_20          ;
+; out20     ; MHz_20          ; 2.166 ; 2.166 ; Fall       ; MHz_20          ;
++-----------+-----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Transfers                                                               ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 92       ; 0        ; 0        ; 0        ;
+; CT2:D44|Data[3] ; MHz_20          ; 3        ; 3        ; 0        ; 0        ;
+; MHz_20          ; MHz_20          ; 15       ; 0        ; 0        ; 0        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------+
+; Hold Transfers                                                                ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; CT2:D44|Data[3] ; CT2:D44|Data[3] ; 92       ; 0        ; 0        ; 0        ;
+; CT2:D44|Data[3] ; MHz_20          ; 3        ; 3        ; 0        ; 0        ;
+; MHz_20          ; MHz_20          ; 15       ; 0        ; 0        ; 0        ;
++-----------------+-----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 19    ; 19   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 12    ; 12   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Dec 21 14:31:45 2021
+Info: Command: quartus_sta Scheme -c Scheme
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 125 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Scheme.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name MHz_20 MHz_20
+    Info (332105): create_clock -period 1.000 -name CT2:D44|Data[3] CT2:D44|Data[3]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.175
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.175       -13.985 CT2:D44|Data[3] 
+    Info (332119):    -1.138        -2.918 MHz_20 
+Info (332146): Worst-case hold slack is -2.516
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.516        -4.335 MHz_20 
+    Info (332119):     0.499         0.000 CT2:D44|Data[3] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941        -7.877 MHz_20 
+    Info (332119):    -0.742       -11.872 CT2:D44|Data[3] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.001
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.001        -0.001 CT2:D44|Data[3] 
+    Info (332119):     0.307         0.000 MHz_20 
+Info (332146): Worst-case hold slack is -1.265
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.265        -3.013 MHz_20 
+    Info (332119):     0.203         0.000 CT2:D44|Data[3] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -5.380 MHz_20 
+    Info (332119):    -0.500        -8.000 CT2:D44|Data[3] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4532 megabytes
+    Info: Processing ended: Tue Dec 21 14:31:46 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,5 @@
+module PLM (input C0, C1, C2, C3, C4, C9, C10, C11, ACCESS, VBL, MODSEL, F10, F5, F2_5, F1_25, HBL, EZ output wire CSV, GCLK, SHIFT, LOADROM, HVSYNC, LOADCT2, LOAD, VCLK);
+
+LOADCT2 = !(C0 & C4 & !HBL);
+
+endmodule
