@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/21/2021 18:42:08"
+// Generated on "12/23/2021 01:30:57"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Scheme
 // 
@@ -27,27 +27,19 @@
 
 `timescale 1 ps/ 1 ps
 module Scheme_vlg_sample_tst(
-	A1,
 	ACCESS,
-	B1,
-	C1,
-	GND,
 	M20,
 	MODSEL,
 	sampler_tx
 );
-input  A1;
 input  ACCESS;
-input  B1;
-input  C1;
-input  GND;
 input  M20;
 input  MODSEL;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(A1 or ACCESS or B1 or C1 or GND or M20 or MODSEL)
+always @(ACCESS or M20 or MODSEL)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -67,6 +59,12 @@ assign sampler_tx = sample;
 endmodule
 
 module Scheme_vlg_check_tst (
+	CSV,
+	GCLK,
+	HVSYNC,
+	LOAD,
+	LOADCT2,
+	LOADPOM,
 	M1,
 	M1_25,
 	M2,
@@ -79,8 +77,16 @@ module Scheme_vlg_check_tst (
 	nF1T,
 	nF2T,
 	nRAS,
+	SHIFT,
+	VCLK,
 	sampler_rx
 );
+input  CSV;
+input  GCLK;
+input  HVSYNC;
+input  LOAD;
+input  LOADCT2;
+input  LOADPOM;
 input  M1;
 input  M1_25;
 input  M2;
@@ -93,8 +99,16 @@ input  nCAS;
 input  nF1T;
 input  nF2T;
 input  nRAS;
+input  SHIFT;
+input  VCLK;
 input sampler_rx;
 
+reg  CSV_expected;
+reg  GCLK_expected;
+reg  HVSYNC_expected;
+reg  LOAD_expected;
+reg  LOADCT2_expected;
+reg  LOADPOM_expected;
 reg  M1_expected;
 reg  M1_25_expected;
 reg  M2_expected;
@@ -107,7 +121,15 @@ reg  nCAS_expected;
 reg  nF1T_expected;
 reg  nF2T_expected;
 reg  nRAS_expected;
+reg  SHIFT_expected;
+reg  VCLK_expected;
 
+reg  CSV_prev;
+reg  GCLK_prev;
+reg  HVSYNC_prev;
+reg  LOAD_prev;
+reg  LOADCT2_prev;
+reg  LOADPOM_prev;
 reg  M1_prev;
 reg  M1_25_prev;
 reg  M2_prev;
@@ -120,7 +142,15 @@ reg  nCAS_prev;
 reg  nF1T_prev;
 reg  nF2T_prev;
 reg  nRAS_prev;
+reg  SHIFT_prev;
+reg  VCLK_prev;
 
+reg  CSV_expected_prev;
+reg  GCLK_expected_prev;
+reg  HVSYNC_expected_prev;
+reg  LOAD_expected_prev;
+reg  LOADCT2_expected_prev;
+reg  LOADPOM_expected_prev;
 reg  M1_expected_prev;
 reg  M1_25_expected_prev;
 reg  M2_expected_prev;
@@ -133,7 +163,15 @@ reg  nCAS_expected_prev;
 reg  nF1T_expected_prev;
 reg  nF2T_expected_prev;
 reg  nRAS_expected_prev;
+reg  SHIFT_expected_prev;
+reg  VCLK_expected_prev;
 
+reg  last_CSV_exp;
+reg  last_GCLK_exp;
+reg  last_HVSYNC_exp;
+reg  last_LOAD_exp;
+reg  last_LOADCT2_exp;
+reg  last_LOADPOM_exp;
 reg  last_M1_exp;
 reg  last_M1_25_exp;
 reg  last_M2_exp;
@@ -146,13 +184,15 @@ reg  last_nCAS_exp;
 reg  last_nF1T_exp;
 reg  last_nF2T_exp;
 reg  last_nRAS_exp;
+reg  last_SHIFT_exp;
+reg  last_VCLK_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:12] on_first_change ;
+reg [1:20] on_first_change ;
 
 
 initial
@@ -160,13 +200,19 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 12'b1;
+on_first_change = 20'b1;
 end
 
 // update real /o prevs
 
 always @(trigger)
 begin
+	CSV_prev = CSV;
+	GCLK_prev = GCLK;
+	HVSYNC_prev = HVSYNC;
+	LOAD_prev = LOAD;
+	LOADCT2_prev = LOADCT2;
+	LOADPOM_prev = LOADPOM;
 	M1_prev = M1;
 	M1_25_prev = M1_25;
 	M2_prev = M2;
@@ -179,12 +225,20 @@ begin
 	nF1T_prev = nF1T;
 	nF2T_prev = nF2T;
 	nRAS_prev = nRAS;
+	SHIFT_prev = SHIFT;
+	VCLK_prev = VCLK;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
+	CSV_expected_prev = CSV_expected;
+	GCLK_expected_prev = GCLK_expected;
+	HVSYNC_expected_prev = HVSYNC_expected;
+	LOAD_expected_prev = LOAD_expected;
+	LOADCT2_expected_prev = LOADCT2_expected;
+	LOADPOM_expected_prev = LOADPOM_expected;
 	M1_expected_prev = M1_expected;
 	M1_25_expected_prev = M1_25_expected;
 	M2_expected_prev = M2_expected;
@@ -197,27 +251,11 @@ begin
 	nF1T_expected_prev = nF1T_expected;
 	nF2T_expected_prev = nF2T_expected;
 	nRAS_expected_prev = nRAS_expected;
+	SHIFT_expected_prev = SHIFT_expected;
+	VCLK_expected_prev = VCLK_expected;
 end
 
 
-
-// expected M4
-initial
-begin
-	M4_expected = 1'bX;
-end 
-
-// expected M2
-initial
-begin
-	M2_expected = 1'bX;
-end 
-
-// expected M1
-initial
-begin
-	M1_expected = 1'bX;
-end 
 
 // expected M10
 initial
@@ -231,10 +269,10 @@ begin
 	M5_expected = 1'bX;
 end 
 
-// expected M2_5
+// expected M_2_5
 initial
 begin
-	M2_5_expected = 1'bX;
+	M_2_5_expected = 1'bX;
 end 
 
 // expected M1_25
@@ -243,10 +281,28 @@ begin
 	M1_25_expected = 1'bX;
 end 
 
-// expected M_2_5
+// expected M1
 initial
 begin
-	M_2_5_expected = 1'bX;
+	M1_expected = 1'bX;
+end 
+
+// expected M2
+initial
+begin
+	M2_expected = 1'bX;
+end 
+
+// expected M2_5
+initial
+begin
+	M2_5_expected = 1'bX;
+end 
+
+// expected M4
+initial
+begin
+	M4_expected = 1'bX;
 end 
 
 // expected nCAS
@@ -272,8 +328,56 @@ initial
 begin
 	nRAS_expected = 1'bX;
 end 
+
+// expected CSV
+initial
+begin
+	CSV_expected = 1'bX;
+end 
+
+// expected GCLK
+initial
+begin
+	GCLK_expected = 1'bX;
+end 
+
+// expected HVSYNC
+initial
+begin
+	HVSYNC_expected = 1'bX;
+end 
+
+// expected LOAD
+initial
+begin
+	LOAD_expected = 1'bX;
+end 
+
+// expected LOADCT2
+initial
+begin
+	LOADCT2_expected = 1'bX;
+end 
+
+// expected LOADPOM
+initial
+begin
+	LOADPOM_expected = 1'bX;
+end 
+
+// expected SHIFT
+initial
+begin
+	SHIFT_expected = 1'bX;
+end 
+
+// expected VCLK
+initial
+begin
+	VCLK_expected = 1'bX;
+end 
 // generate trigger
-always @(M1_expected or M1 or M1_25_expected or M1_25 or M2_expected or M2 or M2_5_expected or M2_5 or M4_expected or M4 or M5_expected or M5 or M10_expected or M10 or M_2_5_expected or M_2_5 or nCAS_expected or nCAS or nF1T_expected or nF1T or nF2T_expected or nF2T or nRAS_expected or nRAS)
+always @(CSV_expected or CSV or GCLK_expected or GCLK or HVSYNC_expected or HVSYNC or LOAD_expected or LOAD or LOADCT2_expected or LOADCT2 or LOADPOM_expected or LOADPOM or M1_expected or M1 or M1_25_expected or M1_25 or M2_expected or M2 or M2_5_expected or M2_5 or M4_expected or M4 or M5_expected or M5 or M10_expected or M10 or M_2_5_expected or M_2_5 or nCAS_expected or nCAS or nF1T_expected or nF1T or nF2T_expected or nF2T or nRAS_expected or nRAS or SHIFT_expected or SHIFT or VCLK_expected or VCLK)
 begin
 	trigger <= ~trigger;
 end
@@ -283,164 +387,268 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected M1 = %b | expected M1_25 = %b | expected M2 = %b | expected M2_5 = %b | expected M4 = %b | expected M5 = %b | expected M10 = %b | expected M_2_5 = %b | expected nCAS = %b | expected nF1T = %b | expected nF2T = %b | expected nRAS = %b | ",M1_expected_prev,M1_25_expected_prev,M2_expected_prev,M2_5_expected_prev,M4_expected_prev,M5_expected_prev,M10_expected_prev,M_2_5_expected_prev,nCAS_expected_prev,nF1T_expected_prev,nF2T_expected_prev,nRAS_expected_prev);
-	$display("| real M1 = %b | real M1_25 = %b | real M2 = %b | real M2_5 = %b | real M4 = %b | real M5 = %b | real M10 = %b | real M_2_5 = %b | real nCAS = %b | real nF1T = %b | real nF2T = %b | real nRAS = %b | ",M1_prev,M1_25_prev,M2_prev,M2_5_prev,M4_prev,M5_prev,M10_prev,M_2_5_prev,nCAS_prev,nF1T_prev,nF2T_prev,nRAS_prev);
+	$display("| expected CSV = %b | expected GCLK = %b | expected HVSYNC = %b | expected LOAD = %b | expected LOADCT2 = %b | expected LOADPOM = %b | expected M1 = %b | expected M1_25 = %b | expected M2 = %b | expected M2_5 = %b | expected M4 = %b | expected M5 = %b | expected M10 = %b | expected M_2_5 = %b | expected nCAS = %b | expected nF1T = %b | expected nF2T = %b | expected nRAS = %b | expected SHIFT = %b | expected VCLK = %b | ",CSV_expected_prev,GCLK_expected_prev,HVSYNC_expected_prev,LOAD_expected_prev,LOADCT2_expected_prev,LOADPOM_expected_prev,M1_expected_prev,M1_25_expected_prev,M2_expected_prev,M2_5_expected_prev,M4_expected_prev,M5_expected_prev,M10_expected_prev,M_2_5_expected_prev,nCAS_expected_prev,nF1T_expected_prev,nF2T_expected_prev,nRAS_expected_prev,SHIFT_expected_prev,VCLK_expected_prev);
+	$display("| real CSV = %b | real GCLK = %b | real HVSYNC = %b | real LOAD = %b | real LOADCT2 = %b | real LOADPOM = %b | real M1 = %b | real M1_25 = %b | real M2 = %b | real M2_5 = %b | real M4 = %b | real M5 = %b | real M10 = %b | real M_2_5 = %b | real nCAS = %b | real nF1T = %b | real nF2T = %b | real nRAS = %b | real SHIFT = %b | real VCLK = %b | ",CSV_prev,GCLK_prev,HVSYNC_prev,LOAD_prev,LOADCT2_prev,LOADPOM_prev,M1_prev,M1_25_prev,M2_prev,M2_5_prev,M4_prev,M5_prev,M10_prev,M_2_5_prev,nCAS_prev,nF1T_prev,nF2T_prev,nRAS_prev,SHIFT_prev,VCLK_prev);
 `endif
+	if (
+		( CSV_expected_prev !== 1'bx ) && ( CSV_prev !== CSV_expected_prev )
+		&& ((CSV_expected_prev !== last_CSV_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CSV :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CSV_expected_prev);
+		$display ("     Real value = %b", CSV_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CSV_exp = CSV_expected_prev;
+	end
+	if (
+		( GCLK_expected_prev !== 1'bx ) && ( GCLK_prev !== GCLK_expected_prev )
+		&& ((GCLK_expected_prev !== last_GCLK_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port GCLK :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", GCLK_expected_prev);
+		$display ("     Real value = %b", GCLK_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_GCLK_exp = GCLK_expected_prev;
+	end
+	if (
+		( HVSYNC_expected_prev !== 1'bx ) && ( HVSYNC_prev !== HVSYNC_expected_prev )
+		&& ((HVSYNC_expected_prev !== last_HVSYNC_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HVSYNC :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HVSYNC_expected_prev);
+		$display ("     Real value = %b", HVSYNC_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HVSYNC_exp = HVSYNC_expected_prev;
+	end
+	if (
+		( LOAD_expected_prev !== 1'bx ) && ( LOAD_prev !== LOAD_expected_prev )
+		&& ((LOAD_expected_prev !== last_LOAD_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port LOAD :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", LOAD_expected_prev);
+		$display ("     Real value = %b", LOAD_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_LOAD_exp = LOAD_expected_prev;
+	end
+	if (
+		( LOADCT2_expected_prev !== 1'bx ) && ( LOADCT2_prev !== LOADCT2_expected_prev )
+		&& ((LOADCT2_expected_prev !== last_LOADCT2_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port LOADCT2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", LOADCT2_expected_prev);
+		$display ("     Real value = %b", LOADCT2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_LOADCT2_exp = LOADCT2_expected_prev;
+	end
+	if (
+		( LOADPOM_expected_prev !== 1'bx ) && ( LOADPOM_prev !== LOADPOM_expected_prev )
+		&& ((LOADPOM_expected_prev !== last_LOADPOM_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port LOADPOM :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", LOADPOM_expected_prev);
+		$display ("     Real value = %b", LOADPOM_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_LOADPOM_exp = LOADPOM_expected_prev;
+	end
 	if (
 		( M1_expected_prev !== 1'bx ) && ( M1_prev !== M1_expected_prev )
 		&& ((M1_expected_prev !== last_M1_exp) ||
-			on_first_change[1])
+			on_first_change[7])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M1 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M1_expected_prev);
 		$display ("     Real value = %b", M1_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
+		on_first_change[7] = 1'b0;
 		last_M1_exp = M1_expected_prev;
 	end
 	if (
 		( M1_25_expected_prev !== 1'bx ) && ( M1_25_prev !== M1_25_expected_prev )
 		&& ((M1_25_expected_prev !== last_M1_25_exp) ||
-			on_first_change[2])
+			on_first_change[8])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M1_25 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M1_25_expected_prev);
 		$display ("     Real value = %b", M1_25_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[2] = 1'b0;
+		on_first_change[8] = 1'b0;
 		last_M1_25_exp = M1_25_expected_prev;
 	end
 	if (
 		( M2_expected_prev !== 1'bx ) && ( M2_prev !== M2_expected_prev )
 		&& ((M2_expected_prev !== last_M2_exp) ||
-			on_first_change[3])
+			on_first_change[9])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M2 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M2_expected_prev);
 		$display ("     Real value = %b", M2_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[3] = 1'b0;
+		on_first_change[9] = 1'b0;
 		last_M2_exp = M2_expected_prev;
 	end
 	if (
 		( M2_5_expected_prev !== 1'bx ) && ( M2_5_prev !== M2_5_expected_prev )
 		&& ((M2_5_expected_prev !== last_M2_5_exp) ||
-			on_first_change[4])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M2_5 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M2_5_expected_prev);
 		$display ("     Real value = %b", M2_5_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[4] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_M2_5_exp = M2_5_expected_prev;
 	end
 	if (
 		( M4_expected_prev !== 1'bx ) && ( M4_prev !== M4_expected_prev )
 		&& ((M4_expected_prev !== last_M4_exp) ||
-			on_first_change[5])
+			on_first_change[11])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M4 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M4_expected_prev);
 		$display ("     Real value = %b", M4_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
+		on_first_change[11] = 1'b0;
 		last_M4_exp = M4_expected_prev;
 	end
 	if (
 		( M5_expected_prev !== 1'bx ) && ( M5_prev !== M5_expected_prev )
 		&& ((M5_expected_prev !== last_M5_exp) ||
-			on_first_change[6])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M5 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M5_expected_prev);
 		$display ("     Real value = %b", M5_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_M5_exp = M5_expected_prev;
 	end
 	if (
 		( M10_expected_prev !== 1'bx ) && ( M10_prev !== M10_expected_prev )
 		&& ((M10_expected_prev !== last_M10_exp) ||
-			on_first_change[7])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M10 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M10_expected_prev);
 		$display ("     Real value = %b", M10_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
+		on_first_change[13] = 1'b0;
 		last_M10_exp = M10_expected_prev;
 	end
 	if (
 		( M_2_5_expected_prev !== 1'bx ) && ( M_2_5_prev !== M_2_5_expected_prev )
 		&& ((M_2_5_expected_prev !== last_M_2_5_exp) ||
-			on_first_change[8])
+			on_first_change[14])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port M_2_5 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", M_2_5_expected_prev);
 		$display ("     Real value = %b", M_2_5_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[8] = 1'b0;
+		on_first_change[14] = 1'b0;
 		last_M_2_5_exp = M_2_5_expected_prev;
 	end
 	if (
 		( nCAS_expected_prev !== 1'bx ) && ( nCAS_prev !== nCAS_expected_prev )
 		&& ((nCAS_expected_prev !== last_nCAS_exp) ||
-			on_first_change[9])
+			on_first_change[15])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port nCAS :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", nCAS_expected_prev);
 		$display ("     Real value = %b", nCAS_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[9] = 1'b0;
+		on_first_change[15] = 1'b0;
 		last_nCAS_exp = nCAS_expected_prev;
 	end
 	if (
 		( nF1T_expected_prev !== 1'bx ) && ( nF1T_prev !== nF1T_expected_prev )
 		&& ((nF1T_expected_prev !== last_nF1T_exp) ||
-			on_first_change[10])
+			on_first_change[16])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port nF1T :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", nF1T_expected_prev);
 		$display ("     Real value = %b", nF1T_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[10] = 1'b0;
+		on_first_change[16] = 1'b0;
 		last_nF1T_exp = nF1T_expected_prev;
 	end
 	if (
 		( nF2T_expected_prev !== 1'bx ) && ( nF2T_prev !== nF2T_expected_prev )
 		&& ((nF2T_expected_prev !== last_nF2T_exp) ||
-			on_first_change[11])
+			on_first_change[17])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port nF2T :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", nF2T_expected_prev);
 		$display ("     Real value = %b", nF2T_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[17] = 1'b0;
 		last_nF2T_exp = nF2T_expected_prev;
 	end
 	if (
 		( nRAS_expected_prev !== 1'bx ) && ( nRAS_prev !== nRAS_expected_prev )
 		&& ((nRAS_expected_prev !== last_nRAS_exp) ||
-			on_first_change[12])
+			on_first_change[18])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port nRAS :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", nRAS_expected_prev);
 		$display ("     Real value = %b", nRAS_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[12] = 1'b0;
+		on_first_change[18] = 1'b0;
 		last_nRAS_exp = nRAS_expected_prev;
+	end
+	if (
+		( SHIFT_expected_prev !== 1'bx ) && ( SHIFT_prev !== SHIFT_expected_prev )
+		&& ((SHIFT_expected_prev !== last_SHIFT_exp) ||
+			on_first_change[19])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SHIFT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SHIFT_expected_prev);
+		$display ("     Real value = %b", SHIFT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[19] = 1'b0;
+		last_SHIFT_exp = SHIFT_expected_prev;
+	end
+	if (
+		( VCLK_expected_prev !== 1'bx ) && ( VCLK_prev !== VCLK_expected_prev )
+		&& ((VCLK_expected_prev !== last_VCLK_exp) ||
+			on_first_change[20])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port VCLK :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", VCLK_expected_prev);
+		$display ("     Real value = %b", VCLK_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[20] = 1'b0;
+		last_VCLK_exp = VCLK_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -461,14 +669,16 @@ endmodule
 module Scheme_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A1;
 reg ACCESS;
-reg B1;
-reg C1;
-reg GND;
 reg M20;
 reg MODSEL;
 // wires                                               
+wire CSV;
+wire GCLK;
+wire HVSYNC;
+wire LOAD;
+wire LOADCT2;
+wire LOADPOM;
 wire M1;
 wire M1_25;
 wire M2;
@@ -481,17 +691,21 @@ wire nCAS;
 wire nF1T;
 wire nF2T;
 wire nRAS;
+wire SHIFT;
+wire VCLK;
 
 wire sampler;                             
 
 // assign statements (if any)                          
 Scheme i1 (
 // port map - connection between master ports and signals/registers   
-	.A1(A1),
 	.ACCESS(ACCESS),
-	.B1(B1),
-	.C1(C1),
-	.\GND (GND),
+	.CSV(CSV),
+	.GCLK(GCLK),
+	.HVSYNC(HVSYNC),
+	.LOAD(LOAD),
+	.LOADCT2(LOADCT2),
+	.LOADPOM(LOADPOM),
 	.M1(M1),
 	.M1_25(M1_25),
 	.M2(M2),
@@ -505,45 +719,35 @@ Scheme i1 (
 	.nCAS(nCAS),
 	.nF1T(nF1T),
 	.nF2T(nF2T),
-	.nRAS(nRAS)
+	.nRAS(nRAS),
+	.SHIFT(SHIFT),
+	.VCLK(VCLK)
 );
 
 // M20
-always
+initial
 begin
+	M20 = 1'b1;
+	# 5000;
+	repeat(99)
+	begin
+		M20 = 1'b0;
+		M20 = #5000 1'b1;
+		# 5000;
+	end
 	M20 = 1'b0;
-	M20 = #1000 1'b1;
-	#1000;
 end 
 
 // ACCESS
 initial
 begin
+	repeat(12)
+	begin
+		ACCESS = 1'b0;
+		ACCESS = #40000 1'b1;
+		# 40000;
+	end
 	ACCESS = 1'b0;
-end 
-
-// A1
-initial
-begin
-	A1 = 1'b1;
-end 
-
-// B1
-initial
-begin
-	B1 = 1'b1;
-end 
-
-// C1
-initial
-begin
-	C1 = 1'b1;
-end 
-
-// GND
-initial
-begin
-	GND = 1'b0;
 end 
 
 // MODSEL
@@ -553,17 +757,19 @@ begin
 end 
 
 Scheme_vlg_sample_tst tb_sample (
-	.A1(A1),
 	.ACCESS(ACCESS),
-	.B1(B1),
-	.C1(C1),
-	.GND(GND),
 	.M20(M20),
 	.MODSEL(MODSEL),
 	.sampler_tx(sampler)
 );
 
 Scheme_vlg_check_tst tb_out(
+	.CSV(CSV),
+	.GCLK(GCLK),
+	.HVSYNC(HVSYNC),
+	.LOAD(LOAD),
+	.LOADCT2(LOADCT2),
+	.LOADPOM(LOADPOM),
 	.M1(M1),
 	.M1_25(M1_25),
 	.M2(M2),
@@ -576,6 +782,8 @@ Scheme_vlg_check_tst tb_out(
 	.nF1T(nF1T),
 	.nF2T(nF2T),
 	.nRAS(nRAS),
+	.SHIFT(SHIFT),
+	.VCLK(VCLK),
 	.sampler_rx(sampler)
 );
 endmodule

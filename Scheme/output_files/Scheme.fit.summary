@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Dec 21 18:41:27 2021
+Fitter Status : Successful - Thu Dec 23 01:29:07 2021
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Scheme
 Top-level Entity Name : Scheme
 Family : Cyclone II
 Device : EP2C5AF256I8
 Timing Models : Final
-Total logic elements : 20 / 4,608 ( < 1 % )
-    Total combinational functions : 18 / 4,608 ( < 1 % )
-    Dedicated logic registers : 14 / 4,608 ( < 1 % )
-Total registers : 14
-Total pins : 19 / 158 ( 12 % )
+Total logic elements : 54 / 4,608 ( 1 % )
+    Total combinational functions : 51 / 4,608 ( 1 % )
+    Dedicated logic registers : 32 / 4,608 ( < 1 % )
+Total registers : 32
+Total pins : 23 / 158 ( 15 % )
 Total virtual pins : 0
 Total memory bits : 0 / 119,808 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )

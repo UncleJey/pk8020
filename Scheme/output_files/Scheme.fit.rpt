@@ -1,5 +1,5 @@
 Fitter report for Scheme
-Tue Dec 21 18:41:27 2021
+Thu Dec 23 01:29:07 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Dec 21 18:41:27 2021           ;
+; Fitter Status                      ; Successful - Thu Dec 23 01:29:07 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Scheme                                          ;
 ; Top-level Entity Name              ; Scheme                                          ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5AF256I8                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 20 / 4,608 ( < 1 % )                            ;
-;     Total combinational functions  ; 18 / 4,608 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 14 / 4,608 ( < 1 % )                            ;
-; Total registers                    ; 14                                              ;
-; Total pins                         ; 19 / 158 ( 12 % )                               ;
+; Total logic elements               ; 54 / 4,608 ( 1 % )                              ;
+;     Total combinational functions  ; 51 / 4,608 ( 1 % )                              ;
+;     Dedicated logic registers      ; 32 / 4,608 ( < 1 % )                            ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 23 / 158 ( 15 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -148,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 59 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 59 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 113 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 113 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -172,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 56      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 110     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -188,46 +188,46 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 20 / 4,608 ( < 1 % ) ;
-;     -- Combinational with no register       ; 6                    ;
-;     -- Register only                        ; 2                    ;
-;     -- Combinational with a register        ; 12                   ;
+; Total logic elements                        ; 54 / 4,608 ( 1 % )   ;
+;     -- Combinational with no register       ; 22                   ;
+;     -- Register only                        ; 3                    ;
+;     -- Combinational with a register        ; 29                   ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 7                    ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 9                    ;
-;     -- Register only                        ; 2                    ;
+;     -- 4 input functions                    ; 25                   ;
+;     -- 3 input functions                    ; 6                    ;
+;     -- <=2 input functions                  ; 20                   ;
+;     -- Register only                        ; 3                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 18                   ;
+;     -- normal mode                          ; 51                   ;
 ;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
-; Total registers*                            ; 14 / 5,058 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 14 / 4,608 ( < 1 % ) ;
+; Total registers*                            ; 32 / 5,058 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 32 / 4,608 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 450 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )      ;
+; Total LABs:  partially or completely used   ; 7 / 288 ( 2 % )      ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 19 / 158 ( 12 % )    ;
+; I/O pins                                    ; 23 / 158 ( 15 % )    ;
 ;     -- Clock pins                           ; 2 / 4 ( 50 % )       ;
 ;                                             ;                      ;
-; Global signals                              ; 4                    ;
+; Global signals                              ; 3                    ;
 ; M4Ks                                        ; 0 / 26 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 119,808 ( 0 % )  ;
 ; Total block memory implementation bits      ; 0 / 119,808 ( 0 % )  ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )       ;
 ; PLLs                                        ; 0 / 2 ( 0 % )        ;
-; Global clocks                               ; 4 / 8 ( 50 % )       ;
+; Global clocks                               ; 3 / 8 ( 38 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )        ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 8                    ;
-; Highest non-global fan-out                  ; 7                    ;
-; Total fan-out                               ; 96                   ;
-; Average fan-out                             ; 1.60                 ;
+; Maximum fan-out                             ; 20                   ;
+; Highest non-global fan-out                  ; 10                   ;
+; Total fan-out                               ; 258                  ;
+; Average fan-out                             ; 2.24                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -240,32 +240,32 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 20 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 6                   ; 0                              ;
-;     -- Register only                        ; 2                   ; 0                              ;
-;     -- Combinational with a register        ; 12                  ; 0                              ;
+; Total logic elements                        ; 54 / 4608 ( 1 % )   ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 22                  ; 0                              ;
+;     -- Register only                        ; 3                   ; 0                              ;
+;     -- Combinational with a register        ; 29                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 7                   ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 9                   ; 0                              ;
-;     -- Register only                        ; 2                   ; 0                              ;
+;     -- 4 input functions                    ; 25                  ; 0                              ;
+;     -- 3 input functions                    ; 6                   ; 0                              ;
+;     -- <=2 input functions                  ; 20                  ; 0                              ;
+;     -- Register only                        ; 3                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 18                  ; 0                              ;
+;     -- normal mode                          ; 51                  ; 0                              ;
 ;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 14                  ; 0                              ;
-;     -- Dedicated logic registers            ; 14 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
+; Total registers                             ; 32                  ; 0                              ;
+;     -- Dedicated logic registers            ; 32 / 4608 ( < 1 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 3 / 288 ( 1 % )     ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 7 / 288 ( 2 % )     ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 19                  ; 0                              ;
+; I/O pins                                    ; 23                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 4 / 10 ( 40 % )     ; 0 / 10 ( 0 % )                 ;
+; Clock control block                         ; 3 / 10 ( 30 % )     ; 0 / 10 ( 0 % )                 ;
 ;                                             ;                     ;                                ;
 ; Connections                                 ;                     ;                                ;
 ;     -- Input Connections                    ; 0                   ; 0                              ;
@@ -274,16 +274,16 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 96                  ; 0                              ;
-;     -- Registered Connections               ; 46                  ; 0                              ;
+;     -- Total Connections                    ; 258                 ; 0                              ;
+;     -- Registered Connections               ; 147                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 7                   ; 0                              ;
-;     -- Output Ports                         ; 12                  ; 0                              ;
+;     -- Input Ports                          ; 3                   ; 0                              ;
+;     -- Output Ports                         ; 20                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -307,34 +307,38 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; A1     ; J2    ; 1        ; 0            ; 6            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ACCESS ; D10   ; 2        ; 14           ; 14           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; B1     ; H1    ; 1        ; 0            ; 6            ; 1           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; C1     ; K15   ; 3        ; 28           ; 6            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; GND    ; J1    ; 1        ; 0            ; 6            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; ACCESS ; H1    ; 1        ; 0            ; 6            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; M20    ; H2    ; 1        ; 0            ; 6            ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; MODSEL ; T7    ; 4        ; 7            ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; MODSEL ; J2    ; 1        ; 0            ; 6            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                         ;
-+-------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+-------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; M1    ; L15   ; 3        ; 28           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M10   ; J4    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M1_25 ; M2    ; 1        ; 0            ; 4            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M2    ; K16   ; 3        ; 28           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M2_5  ; K2    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M4    ; M14   ; 3        ; 28           ; 5            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M5    ; K1    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; M_2_5 ; L2    ; 1        ; 0            ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; nCAS  ; L1    ; 1        ; 0            ; 4            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; nF1T  ; K4    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; nF2T  ; M1    ; 1        ; 0            ; 4            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; nRAS  ; K5    ; 1        ; 0            ; 5            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-+-------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                           ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; CSV     ; K5    ; 1        ; 0            ; 5            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; GCLK    ; M2    ; 1        ; 0            ; 4            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HVSYNC  ; R7    ; 4        ; 7            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LOAD    ; K1    ; 1        ; 0            ; 5            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LOADCT2 ; T7    ; 4        ; 7            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LOADPOM ; L1    ; 1        ; 0            ; 4            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M1      ; D5    ; 1        ; 0            ; 13           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M10     ; J4    ; 1        ; 0            ; 4            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M1_25   ; N2    ; 1        ; 0            ; 3            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M2      ; C1    ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M2_5    ; N8    ; 4        ; 7            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M4      ; C2    ; 1        ; 0            ; 13           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M5      ; M1    ; 1        ; 0            ; 4            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; M_2_5   ; T6    ; 4        ; 7            ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; SHIFT   ; K2    ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; VCLK    ; L2    ; 1        ; 0            ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; nCAS    ; M3    ; 1        ; 0            ; 3            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; nF1T    ; R5    ; 4        ; 5            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; nF2T    ; K4    ; 1        ; 0            ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; nRAS    ; T5    ; 4        ; 5            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
++---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
 +------------------------------------------------------------+
@@ -342,10 +346,10 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 15 / 35 ( 43 % ) ; 3.3V          ; --           ;
-; 2        ; 1 / 43 ( 2 % )   ; 3.3V          ; --           ;
-; 3        ; 5 / 39 ( 13 % )  ; 3.3V          ; --           ;
-; 4        ; 1 / 41 ( 2 % )   ; 3.3V          ; --           ;
+; 1        ; 19 / 35 ( 54 % ) ; 3.3V          ; --           ;
+; 2        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
+; 3        ; 1 / 39 ( 3 % )   ; 3.3V          ; --           ;
+; 4        ; 6 / 41 ( 15 % )  ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -386,8 +390,8 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; B14      ; 127        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B16      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C1       ; 2          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C2       ; 3          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C1       ; 2          ; 1        ; M2                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C2       ; 3          ; 1        ; M4                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C3       ; 0          ; 1        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C4       ; 161        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 160        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -406,12 +410,12 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; D2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; D3       ; 8          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D4       ; 9          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D5       ; 4          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D5       ; 4          ; 1        ; M1                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D6       ; 158        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D7       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; D8       ; 153        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D9       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; D10      ; 145        ; 2        ; ACCESS                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D10      ; 145        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 144        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D12      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D13      ; 124        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -466,7 +470,7 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; G14      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; G15      ; 112        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G16      ; 111        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H1       ; 21         ; 1        ; B1                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H1       ; 21         ; 1        ; ACCESS                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H2       ; 20         ; 1        ; M20                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H4       ; 18         ; 1        ; ^DCLK                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -482,8 +486,8 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; H14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H15      ; 107        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H16      ; 108        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; J1       ; 24         ; 1        ; GND                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J2       ; 23         ; 1        ; A1                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J1       ; 24         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; J2       ; 23         ; 1        ; MODSEL                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J4       ; 32         ; 1        ; M10                                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J5       ; 22         ; 1        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -498,11 +502,11 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; J14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J15      ; 106        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J16      ; 105        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; K1       ; 26         ; 1        ; M5                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K2       ; 25         ; 1        ; M2_5                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K1       ; 26         ; 1        ; LOAD                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K2       ; 25         ; 1        ; SHIFT                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K3       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; K4       ; 27         ; 1        ; nF1T                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K5       ; 28         ; 1        ; nRAS                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K4       ; 27         ; 1        ; nF2T                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K5       ; 28         ; 1        ; CSV                                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K6       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K7       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K8       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -512,10 +516,10 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; K12      ; 101        ; 3        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K13      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K14      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; K15      ; 104        ; 3        ; C1                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; K16      ; 103        ; 3        ; M2                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; L1       ; 30         ; 1        ; nCAS                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; L2       ; 31         ; 1        ; M_2_5                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K15      ; 104        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K16      ; 103        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L1       ; 30         ; 1        ; LOADPOM                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L2       ; 31         ; 1        ; VCLK                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L3       ; 37         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L4       ; 41         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L5       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -528,11 +532,11 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; L12      ; 77         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; L13      ; 100        ; 3        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L14      ; 96         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L15      ; 97         ; 3        ; M1                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L15      ; 97         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L16      ; 98         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M1       ; 29         ; 1        ; nF2T                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M2       ; 33         ; 1        ; M1_25                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M3       ; 34         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M1       ; 29         ; 1        ; M5                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M2       ; 33         ; 1        ; GCLK                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M3       ; 34         ; 1        ; nCAS                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M4       ; 42         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M5       ;            ;          ; VCCA_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; M6       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -543,17 +547,17 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; M11      ; 82         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; M12      ; 85         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M13      ; 99         ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; M14      ; 95         ; 3        ; M4                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M14      ; 95         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; M15      ; 93         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M16      ; 94         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N1       ; 35         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N2       ; 36         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N2       ; 36         ; 1        ; M1_25                                    ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N3       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N5       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N6       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; N8       ; 52         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; N8       ; 52         ; 4        ; M2_5                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N9       ; 61         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; N10      ; 62         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; N11      ; 72         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -582,9 +586,9 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; R2       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R3       ; 43         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R4       ; 48         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R5       ; 50         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; R5       ; 50         ; 4        ; nF1T                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R6       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; R7       ; 54         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; R7       ; 54         ; 4        ; HVSYNC                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R8       ; 58         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R9       ; 60         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R10      ; 68         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -598,9 +602,9 @@ The pin-out file can be found in D:/Korvet/pk8020/Scheme/output_files/Scheme.pin
 ; T2       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T3       ; 44         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T4       ; 47         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; T5       ; 49         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; T6       ; 51         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; T7       ; 53         ; 4        ; MODSEL                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; T5       ; 49         ; 4        ; nRAS                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; T6       ; 51         ; 4        ; M_2_5                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; T7       ; 53         ; 4        ; LOADCT2                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; T8       ; 57         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T9       ; 59         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T10      ; 69         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -656,75 +660,78 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Scheme                    ; 20 (2)      ; 14 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 6 (2)        ; 2 (0)             ; 12 (0)           ; |Scheme             ; work         ;
-;    |CT2:D44|               ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |Scheme|CT2:D44     ; work         ;
-;    |CT2:D50|               ; 6 (6)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; |Scheme|CT2:D50     ; work         ;
+; |Scheme                    ; 54 (2)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 23   ; 0            ; 22 (2)       ; 3 (0)             ; 29 (0)           ; |Scheme             ; work         ;
+;    |CT2:D44|               ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |Scheme|CT2:D44     ; work         ;
+;    |CT2:D45|               ; 7 (7)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; |Scheme|CT2:D45     ; work         ;
+;    |CT2:D46|               ; 7 (7)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (5)            ; |Scheme|CT2:D46     ; work         ;
+;    |CT2:D47|               ; 8 (8)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |Scheme|CT2:D47     ; work         ;
+;    |CT2:D48|               ; 8 (8)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (5)            ; |Scheme|CT2:D48     ; work         ;
+;    |CT2:D50|               ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |Scheme|CT2:D50     ; work         ;
+;    |PLM:D49|               ; 11 (11)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 1 (1)            ; |Scheme|PLM:D49     ; work         ;
 ;    |T:D25|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Scheme|T:D25       ; work         ;
-;    |T:D26|                 ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; |Scheme|T:D26       ; work         ;
-;    |T:D27|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Scheme|T:D27       ; work         ;
-;    |T:inst6|               ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Scheme|T:inst6     ; work         ;
+;    |T:D26|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Scheme|T:D26       ; work         ;
+;    |T:D27|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Scheme|T:D27       ; work         ;
+;    |T:inst6|               ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Scheme|T:inst6     ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Delay Chain Summary                                                             ;
-+--------+----------+---------------+---------------+-----------------------+-----+
-; Name   ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+--------+----------+---------------+---------------+-----------------------+-----+
-; M4     ; Output   ; --            ; --            ; --                    ; --  ;
-; M2     ; Output   ; --            ; --            ; --                    ; --  ;
-; M1     ; Output   ; --            ; --            ; --                    ; --  ;
-; M10    ; Output   ; --            ; --            ; --                    ; --  ;
-; M5     ; Output   ; --            ; --            ; --                    ; --  ;
-; M2_5   ; Output   ; --            ; --            ; --                    ; --  ;
-; M1_25  ; Output   ; --            ; --            ; --                    ; --  ;
-; nF2T   ; Output   ; --            ; --            ; --                    ; --  ;
-; nRAS   ; Output   ; --            ; --            ; --                    ; --  ;
-; M_2_5  ; Output   ; --            ; --            ; --                    ; --  ;
-; nF1T   ; Output   ; --            ; --            ; --                    ; --  ;
-; nCAS   ; Output   ; --            ; --            ; --                    ; --  ;
-; ACCESS ; Input    ; (0) 162 ps    ; (0) 162 ps    ; --                    ; --  ;
-; MODSEL ; Input    ; (0) 162 ps    ; (0) 162 ps    ; --                    ; --  ;
-; C1     ; Input    ; (6) 2403 ps   ; (6) 2403 ps   ; --                    ; --  ;
-; M20    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; B1     ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; A1     ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-; GND    ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
-+--------+----------+---------------+---------------+-----------------------+-----+
++----------------------------------------------------------------------------------+
+; Delay Chain Summary                                                              ;
++---------+----------+---------------+---------------+-----------------------+-----+
+; Name    ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++---------+----------+---------------+---------------+-----------------------+-----+
+; M4      ; Output   ; --            ; --            ; --                    ; --  ;
+; M2      ; Output   ; --            ; --            ; --                    ; --  ;
+; M1      ; Output   ; --            ; --            ; --                    ; --  ;
+; M10     ; Output   ; --            ; --            ; --                    ; --  ;
+; M5      ; Output   ; --            ; --            ; --                    ; --  ;
+; M2_5    ; Output   ; --            ; --            ; --                    ; --  ;
+; M1_25   ; Output   ; --            ; --            ; --                    ; --  ;
+; nF2T    ; Output   ; --            ; --            ; --                    ; --  ;
+; nRAS    ; Output   ; --            ; --            ; --                    ; --  ;
+; M_2_5   ; Output   ; --            ; --            ; --                    ; --  ;
+; nF1T    ; Output   ; --            ; --            ; --                    ; --  ;
+; nCAS    ; Output   ; --            ; --            ; --                    ; --  ;
+; CSV     ; Output   ; --            ; --            ; --                    ; --  ;
+; GCLK    ; Output   ; --            ; --            ; --                    ; --  ;
+; SHIFT   ; Output   ; --            ; --            ; --                    ; --  ;
+; LOADPOM ; Output   ; --            ; --            ; --                    ; --  ;
+; HVSYNC  ; Output   ; --            ; --            ; --                    ; --  ;
+; LOADCT2 ; Output   ; --            ; --            ; --                    ; --  ;
+; LOAD    ; Output   ; --            ; --            ; --                    ; --  ;
+; VCLK    ; Output   ; --            ; --            ; --                    ; --  ;
+; ACCESS  ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
+; MODSEL  ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
+; M20     ; Input    ; (0) 163 ps    ; (0) 163 ps    ; --                    ; --  ;
++---------+----------+---------------+---------------+-----------------------+-----+
 
 
-+--------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                         ;
-+--------------------------+-------------------+---------+
-; Source Pin / Fanout      ; Pad To Core Index ; Setting ;
-+--------------------------+-------------------+---------+
-; ACCESS                   ;                   ;         ;
-; MODSEL                   ;                   ;         ;
-; C1                       ;                   ;         ;
-;      - CT2:D50|Data[2]~0 ; 1                 ; 6       ;
-;      - CT2:D50|Data~1    ; 1                 ; 6       ;
-;      - T:inst6|RF~0      ; 1                 ; 6       ;
-;      - CT2:D50|Data~2    ; 1                 ; 6       ;
-;      - CT2:D50|Data~3    ; 1                 ; 6       ;
-;      - CT2:D50|Data~4    ; 1                 ; 6       ;
-; M20                      ;                   ;         ;
-; B1                       ;                   ;         ;
-; A1                       ;                   ;         ;
-; GND                      ;                   ;         ;
-+--------------------------+-------------------+---------+
++---------------------------------------------------+
+; Pad To Core Delay Chain Fanout                    ;
++---------------------+-------------------+---------+
+; Source Pin / Fanout ; Pad To Core Index ; Setting ;
++---------------------+-------------------+---------+
+; ACCESS              ;                   ;         ;
+; MODSEL              ;                   ;         ;
+; M20                 ;                   ;         ;
++---------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                   ;
-+-----------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name            ; Location       ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; CT2:D44|Data[0] ; LCFF_X1_Y6_N29 ; 2       ; Clock ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; CT2:D44|Data[1] ; LCFF_X1_Y6_N23 ; 2       ; Clock ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; CT2:D50|Data[3] ; LCFF_X27_Y7_N7 ; 2       ; Clock ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; M20             ; PIN_H2         ; 8       ; Clock ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-+-----------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                             ;
++-------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name              ; Location        ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CT2:D44|Data[0]   ; LCFF_X1_Y6_N17  ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; CT2:D44|Data[1]   ; LCFF_X7_Y5_N25  ; 10      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; CT2:D44|Data[3]   ; LCFF_X7_Y5_N1   ; 20      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; CT2:D45|CR        ; LCFF_X8_Y5_N3   ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CT2:D47|always0~0 ; LCCOMB_X8_Y5_N0 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CT2:D48|always0~0 ; LCCOMB_X9_Y5_N8 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CT2:D50|Data[3]   ; LCFF_X1_Y13_N9  ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; M20               ; PIN_H2          ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
++-------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -732,9 +739,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------+---------+----------------------+------------------+---------------------------+
 ; Name            ; Location       ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------+----------------+---------+----------------------+------------------+---------------------------+
-; CT2:D44|Data[0] ; LCFF_X1_Y6_N29 ; 2       ; Global Clock         ; GCLK3            ; --                        ;
-; CT2:D44|Data[1] ; LCFF_X1_Y6_N23 ; 2       ; Global Clock         ; GCLK0            ; --                        ;
-; CT2:D50|Data[3] ; LCFF_X27_Y7_N7 ; 2       ; Global Clock         ; GCLK7            ; --                        ;
+; CT2:D44|Data[0] ; LCFF_X1_Y6_N17 ; 2       ; Global Clock         ; GCLK0            ; --                        ;
+; CT2:D44|Data[3] ; LCFF_X7_Y5_N1  ; 20      ; Global Clock         ; GCLK1            ; --                        ;
 ; M20             ; PIN_H2         ; 8       ; Global Clock         ; GCLK2            ; --                        ;
 +-----------------+----------------+---------+----------------------+------------------+---------------------------+
 
@@ -744,42 +750,91 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+-------------+
 ; Name              ; Fan-Out     ;
 +-------------------+-------------+
-; CT2:D44|Data[0]   ; 7           ;
-; C1                ; 6           ;
-; CT2:D50|Data[2]   ; 6           ;
-; B1                ; 5           ;
+; CT2:D48|CR        ; 10          ;
+; CT2:D44|Data[2]   ; 10          ;
+; CT2:D44|Data[1]   ; 10          ;
+; CT2:D44|Data[0]   ; 9           ;
+; CT2:D45|Data[0]   ; 8           ;
+; CT2:D45|CR        ; 7           ;
+; CT2:D46|Data[0]   ; 7           ;
+; CT2:D46|Data[2]   ; 7           ;
+; CT2:D44|Data[3]   ; 6           ;
+; CT2:D47|always0~0 ; 5           ;
+; CT2:D48|always0~0 ; 5           ;
+; PLM:D49|LOADCT2~0 ; 5           ;
+; CT2:D48|Data[0]   ; 5           ;
+; CT2:D50|Data[2]   ; 5           ;
+; CT2:D47|Data[0]   ; 4           ;
+; CT2:D46|Data[1]   ; 4           ;
 ; CT2:D50|Data[0]   ; 4           ;
-; CT2:D44|Data[2]   ; 4           ;
-; CT2:D44|Data[1]   ; 4           ;
+; CT2:D45|Data[2]   ; 4           ;
+; CT2:D47|Data[2]   ; 4           ;
+; CT2:D47|Data[3]   ; 4           ;
+; CT2:D48|Data[3]   ; 4           ;
+; CT2:D48|Equal0~1  ; 3           ;
+; CT2:D45|Equal0~1  ; 3           ;
+; CT2:D45|Data[1]   ; 3           ;
+; CT2:D47|Equal0~1  ; 3           ;
+; CT2:D47|Data[1]   ; 3           ;
+; CT2:D48|Data[1]   ; 3           ;
+; CT2:D48|Data[2]   ; 3           ;
 ; CT2:D50|Data[1]   ; 3           ;
+; CT2:D45|Data[3]   ; 3           ;
 ; T:D25|RF          ; 3           ;
 ; CT2:D50|Data[3]   ; 3           ;
-; GND               ; 2           ;
-; T:D26|RF~0        ; 2           ;
+; MODSEL            ; 2           ;
+; CT2:D46|Equal0~0  ; 2           ;
+; CT2:D46|Data[3]   ; 2           ;
+; CT2:D45|Equal0~0  ; 2           ;
+; CT2:D47|Equal0~0  ; 2           ;
+; CT2:D48|Equal0~0  ; 2           ;
+; PLM:D49|LOAD~0    ; 2           ;
 ; T:D26|RF          ; 2           ;
-; CT2:D44|Data[3]   ; 2           ;
 ; T:inst6|RF        ; 2           ;
-; A1                ; 1           ;
-; T:inst6|RI~0      ; 1           ;
-; T:D26|RI~0        ; 1           ;
-; CT2:D50|Data~4    ; 1           ;
+; ACCESS            ; 1           ;
+; CT2:D46|Data[0]~3 ; 1           ;
+; CT2:D45|Data[0]~3 ; 1           ;
+; CT2:D44|Data[0]~3 ; 1           ;
+; T:inst6|RF~0      ; 1           ;
+; CT2:D45|CR~2      ; 1           ;
+; CT2:D46|Data[3]~2 ; 1           ;
+; CT2:D46|Equal0~1  ; 1           ;
+; CT2:D45|Data~2    ; 1           ;
+; CT2:D47|Data~3    ; 1           ;
+; CT2:D47|Data~2    ; 1           ;
+; CT2:D47|CR~0      ; 1           ;
+; CT2:D48|CR~0      ; 1           ;
+; CT2:D48|Data~3    ; 1           ;
+; CT2:D48|Data~2    ; 1           ;
+; CT2:D46|Data~1    ; 1           ;
 ; CT2:D50|Data~3    ; 1           ;
 ; CT2:D50|Data~2    ; 1           ;
-; T:D27|RF~0        ; 1           ;
-; CT2:D44|Data~3    ; 1           ;
-; CT2:D44|Add0~0    ; 1           ;
-; CT2:D44|Data~2    ; 1           ;
-; CT2:D44|Data~1    ; 1           ;
-; CT2:D44|Data~0    ; 1           ;
-; T:inst6|RF~0      ; 1           ;
-; T:inst6|RI~reg0   ; 1           ;
-; CT2:D50|Data~1    ; 1           ;
-; CT2:D50|Add0~0    ; 1           ;
-; CT2:D50|Data[2]~0 ; 1           ;
+; CT2:D45|Data~1    ; 1           ;
+; CT2:D45|Data~0    ; 1           ;
+; CT2:D47|Data~1    ; 1           ;
+; CT2:D48|Data~1    ; 1           ;
+; CT2:D46|CR        ; 1           ;
+; CT2:D47|Data~0    ; 1           ;
+; CT2:D47|CR        ; 1           ;
+; CT2:D48|Data~0    ; 1           ;
+; CT2:D46|Data~0    ; 1           ;
+; CT2:D44|Data[3]~2 ; 1           ;
+; CT2:D44|Data[2]~1 ; 1           ;
+; CT2:D44|Data[1]~0 ; 1           ;
+; CT2:D50|Data[3]~1 ; 1           ;
+; CT2:D50|Data[3]~0 ; 1           ;
+; PLM:D49|VCLK~0    ; 1           ;
+; PLM:D49|LOAD~1    ; 1           ;
+; PLM:D49|HVSYNC~2  ; 1           ;
+; PLM:D49|HVSYNC~1  ; 1           ;
+; PLM:D49|HVSYNC~0  ; 1           ;
+; PLM:D49|LOADPOM~0 ; 1           ;
+; PLM:D49|SHIFT~0   ; 1           ;
+; PLM:D49|CSV       ; 1           ;
+; PLM:D49|CSV~0     ; 1           ;
 ; T:D27|RF          ; 1           ;
 ; D24               ; 1           ;
 ; D39               ; 1           ;
-; T:D26|RI~reg0     ; 1           ;
 +-------------------+-------------+
 
 
@@ -788,100 +843,118 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 30 / 15,666 ( < 1 % ) ;
+; Block interconnects         ; 52 / 15,666 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 812 ( 0 % )       ;
-; C4 interconnects            ; 13 / 11,424 ( < 1 % ) ;
-; Direct links                ; 10 / 15,666 ( < 1 % ) ;
-; Global clocks               ; 4 / 8 ( 50 % )        ;
-; Local interconnects         ; 12 / 4,608 ( < 1 % )  ;
-; R24 interconnects           ; 1 / 652 ( < 1 % )     ;
-; R4 interconnects            ; 11 / 13,328 ( < 1 % ) ;
+; C4 interconnects            ; 16 / 11,424 ( < 1 % ) ;
+; Direct links                ; 25 / 15,666 ( < 1 % ) ;
+; Global clocks               ; 3 / 8 ( 38 % )        ;
+; Local interconnects         ; 37 / 4,608 ( < 1 % )  ;
+; R24 interconnects           ; 2 / 652 ( < 1 % )     ;
+; R4 interconnects            ; 22 / 13,328 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 6.67) ; Number of LABs  (Total = 3) ;
+; Number of Logic Elements  (Average = 7.71) ; Number of LABs  (Total = 7) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
+; 1                                          ; 2                           ;
 ; 2                                          ; 0                           ;
 ; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
+; 4                                          ; 1                           ;
 ; 5                                          ; 1                           ;
 ; 6                                          ; 0                           ;
-; 7                                          ; 1                           ;
-; 8                                          ; 1                           ;
+; 7                                          ; 0                           ;
+; 8                                          ; 0                           ;
 ; 9                                          ; 0                           ;
 ; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
+; 11                                         ; 1                           ;
 ; 12                                         ; 0                           ;
 ; 13                                         ; 0                           ;
 ; 14                                         ; 0                           ;
 ; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
+; 16                                         ; 2                           ;
 +--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 3) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 7) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 1                           ;
-; 2 Clocks                           ; 2                           ;
+; 1 Clock                            ; 6                           ;
+; 1 Clock enable                     ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 11.33) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced  (Average = 12.29) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
+; 1                                            ; 1                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
+; 6                                            ; 1                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
-; 9                                            ; 1                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 1                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 1                           ;
+; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 1                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 0                           ;
+; 22                                           ; 0                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 0                           ;
+; 26                                           ; 2                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.33) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced Out  (Average = 3.86) ; Number of LABs  (Total = 7) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
+; 1                                               ; 2                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 1                           ;
+; 3                                               ; 3                           ;
+; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 1                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 1                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 4.33) ; Number of LABs  (Total = 3) ;
+; Number of Distinct Inputs  (Average = 3.29) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
+; 1                                           ; 2                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 2                           ;
-; 5                                           ; 1                           ;
+; 3                                           ; 3                           ;
+; 4                                           ; 1                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -933,7 +1006,7 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location C3
     Info (169125): Pin ~nCSO~ is reserved at location F4
     Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location N14
-Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 23 pins of 23 total pins
     Info (169086): Pin M4 not assigned to an exact location on the device
     Info (169086): Pin M2 not assigned to an exact location on the device
     Info (169086): Pin M1 not assigned to an exact location on the device
@@ -946,46 +1019,48 @@ Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19
     Info (169086): Pin M_2_5 not assigned to an exact location on the device
     Info (169086): Pin nF1T not assigned to an exact location on the device
     Info (169086): Pin nCAS not assigned to an exact location on the device
+    Info (169086): Pin CSV not assigned to an exact location on the device
+    Info (169086): Pin GCLK not assigned to an exact location on the device
+    Info (169086): Pin SHIFT not assigned to an exact location on the device
+    Info (169086): Pin LOADPOM not assigned to an exact location on the device
+    Info (169086): Pin HVSYNC not assigned to an exact location on the device
+    Info (169086): Pin LOADCT2 not assigned to an exact location on the device
+    Info (169086): Pin LOAD not assigned to an exact location on the device
+    Info (169086): Pin VCLK not assigned to an exact location on the device
     Info (169086): Pin ACCESS not assigned to an exact location on the device
     Info (169086): Pin MODSEL not assigned to an exact location on the device
-    Info (169086): Pin C1 not assigned to an exact location on the device
     Info (169086): Pin M20 not assigned to an exact location on the device
-    Info (169086): Pin B1 not assigned to an exact location on the device
-    Info (169086): Pin A1 not assigned to an exact location on the device
-    Info (169086): Pin GND not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Scheme.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node M20 (placed in PIN H2 (CLK0, LVDSCLK0p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node CT2:D44|Data[3] 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node PLM:D49|CSV~0
+        Info (176357): Destination node PLM:D49|SHIFT~0
+        Info (176357): Destination node PLM:D49|LOADPOM~0
+        Info (176357): Destination node PLM:D49|LOAD~1
+        Info (176357): Destination node CT2:D44|Data[3]~2
+        Info (176357): Destination node M1_25
 Info (176353): Automatically promoted node CT2:D44|Data[0] 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node D24
-        Info (176357): Destination node CT2:D44|Data~0
-        Info (176357): Destination node CT2:D44|Data~1
-        Info (176357): Destination node CT2:D44|Data~2
-        Info (176357): Destination node CT2:D44|Add0~0
+        Info (176357): Destination node PLM:D49|CSV
+        Info (176357): Destination node PLM:D49|LOADPOM~0
+        Info (176357): Destination node PLM:D49|VCLK~0
+        Info (176357): Destination node CT2:D44|Data[1]~0
+        Info (176357): Destination node CT2:D44|Data[2]~1
+        Info (176357): Destination node CT2:D44|Data[3]~2
+        Info (176357): Destination node CT2:D44|Data[0]~3
         Info (176357): Destination node M10
-        Info (176357): Destination node M_2_5
-Info (176353): Automatically promoted node CT2:D44|Data[1] 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node CT2:D44|Data~1
-        Info (176357): Destination node CT2:D44|Data~2
-        Info (176357): Destination node CT2:D44|Add0~0
-        Info (176357): Destination node M5
-Info (176353): Automatically promoted node CT2:D50|Data[3] 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node CT2:D50|Add0~0
-        Info (176357): Destination node CT2:D50|Data~1
-        Info (176357): Destination node M2
+        Info (176357): Destination node GCLK
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 18 (unused VREF, 3.3V VCCIO, 6 input, 12 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 22 (unused VREF, 3.3V VCCIO, 2 input, 20 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1005,9 +1080,9 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 12 output pins without output pin load capacitance assignment
+Warning (306006): Found 20 output pins without output pin load capacitance assignment
     Info (306007): Pin "M4" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "M2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "M1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1020,16 +1095,24 @@ Warning (306006): Found 12 output pins without output pin load capacitance assig
     Info (306007): Pin "M_2_5" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "nF1T" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "nCAS" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "CSV" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "GCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "SHIFT" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LOADPOM" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "HVSYNC" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LOADCT2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LOAD" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "VCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file D:/Korvet/pk8020/Scheme/output_files/Scheme.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Tue Dec 21 18:41:27 2021
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Thu Dec 23 01:29:07 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

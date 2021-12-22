@@ -2,6 +2,12 @@ library verilog;
 use verilog.vl_types.all;
 entity Scheme_vlg_check_tst is
     port(
+        CSV             : in     vl_logic;
+        GCLK            : in     vl_logic;
+        HVSYNC          : in     vl_logic;
+        LOAD            : in     vl_logic;
+        LOADCT2         : in     vl_logic;
+        LOADPOM         : in     vl_logic;
         M1              : in     vl_logic;
         M1_25           : in     vl_logic;
         M2              : in     vl_logic;
@@ -14,6 +20,8 @@ entity Scheme_vlg_check_tst is
         nF1T            : in     vl_logic;
         nF2T            : in     vl_logic;
         nRAS            : in     vl_logic;
+        SHIFT           : in     vl_logic;
+        VCLK            : in     vl_logic;
         sampler_rx      : in     vl_logic
     );
 end Scheme_vlg_check_tst;

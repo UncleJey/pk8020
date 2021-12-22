@@ -2,41 +2,53 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'CT2:D44|Data[0]'
-Slack : -1.204
-TNS   : -1.213
-
 Type  : Slow Model Setup 'CT2:D44|Data[1]'
-Slack : -1.198
-TNS   : -1.202
+Slack : -1.655
+TNS   : -1.655
+
+Type  : Slow Model Setup 'CT2:D44|Data[3]'
+Slack : -1.576
+TNS   : -25.260
+
+Type  : Slow Model Setup 'CT2:D44|Data[0]'
+Slack : -0.653
+TNS   : -0.662
 
 Type  : Slow Model Setup 'M20'
-Slack : -1.022
-TNS   : -3.402
+Slack : -0.520
+TNS   : -1.553
 
 Type  : Slow Model Setup 'CT2:D50|Data[3]'
-Slack : -0.021
-TNS   : -0.029
+Slack : 0.235
+TNS   : 0.000
 
 Type  : Slow Model Hold 'M20'
-Slack : -2.533
-TNS   : -9.596
+Slack : -2.549
+TNS   : -11.886
 
-Type  : Slow Model Hold 'CT2:D44|Data[1]'
-Slack : 0.738
+Type  : Slow Model Hold 'CT2:D44|Data[3]'
+Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CT2:D50|Data[3]'
-Slack : 0.742
+Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CT2:D44|Data[0]'
 Slack : 0.743
 TNS   : 0.000
 
+Type  : Slow Model Hold 'CT2:D44|Data[1]'
+Slack : 2.389
+TNS   : 0.000
+
 Type  : Slow Model Minimum Pulse Width 'M20'
 Slack : -1.941
 TNS   : -13.813
+
+Type  : Slow Model Minimum Pulse Width 'CT2:D44|Data[3]'
+Slack : -0.742
+TNS   : -29.680
 
 Type  : Slow Model Minimum Pulse Width 'CT2:D44|Data[0]'
 Slack : -0.742
@@ -44,47 +56,59 @@ TNS   : -2.968
 
 Type  : Slow Model Minimum Pulse Width 'CT2:D44|Data[1]'
 Slack : -0.742
-TNS   : -2.968
+TNS   : -1.484
 
 Type  : Slow Model Minimum Pulse Width 'CT2:D50|Data[3]'
 Slack : -0.742
-TNS   : -2.968
-
-Type  : Fast Model Setup 'CT2:D44|Data[0]'
-Slack : 0.177
-TNS   : 0.000
+TNS   : -1.484
 
 Type  : Fast Model Setup 'CT2:D44|Data[1]'
-Slack : 0.179
+Slack : -0.233
+TNS   : -0.233
+
+Type  : Fast Model Setup 'CT2:D44|Data[3]'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CT2:D44|Data[0]'
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Fast Model Setup 'M20'
-Slack : 0.375
+Slack : 0.512
 TNS   : 0.000
 
 Type  : Fast Model Setup 'CT2:D50|Data[3]'
-Slack : 0.630
+Slack : 0.679
 TNS   : 0.000
 
 Type  : Fast Model Hold 'M20'
-Slack : -1.278
-TNS   : -5.567
+Slack : -1.295
+TNS   : -6.232
 
-Type  : Fast Model Hold 'CT2:D44|Data[0]'
-Slack : 0.225
+Type  : Fast Model Hold 'CT2:D44|Data[3]'
+Slack : 0.203
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CT2:D50|Data[3]'
-Slack : 0.228
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CT2:D44|Data[0]'
+Slack : 0.226
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CT2:D44|Data[1]'
-Slack : 0.244
+Slack : 1.115
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'M20'
 Slack : -1.380
 TNS   : -9.380
+
+Type  : Fast Model Minimum Pulse Width 'CT2:D44|Data[3]'
+Slack : -0.500
+TNS   : -20.000
 
 Type  : Fast Model Minimum Pulse Width 'CT2:D44|Data[0]'
 Slack : -0.500
@@ -92,10 +116,10 @@ TNS   : -2.000
 
 Type  : Fast Model Minimum Pulse Width 'CT2:D44|Data[1]'
 Slack : -0.500
-TNS   : -2.000
+TNS   : -1.000
 
 Type  : Fast Model Minimum Pulse Width 'CT2:D50|Data[3]'
 Slack : -0.500
-TNS   : -2.000
+TNS   : -1.000
 
 ------------------------------------------------------------
