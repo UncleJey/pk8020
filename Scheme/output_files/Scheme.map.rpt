@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Scheme
-Thu Dec 23 01:29:05 2021
+Thu Dec 23 15:46:09 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 23 01:29:05 2021           ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 23 15:46:09 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Scheme                                          ;
 ; Top-level Entity Name              ; Scheme                                          ;
@@ -261,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 23 01:29:04 2021
+    Info: Processing started: Thu Dec 23 15:46:08 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Scheme -c Scheme
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file t.v
@@ -290,7 +290,7 @@ Info (21057): Implemented 78 device resources after synthesis - the final resour
     Info (21061): Implemented 55 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Thu Dec 23 01:29:05 2021
+    Info: Processing ended: Thu Dec 23 15:46:09 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
