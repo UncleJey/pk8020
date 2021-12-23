@@ -38,3 +38,8 @@ XGA 1024x768@60 Hz (pixel clock 65.0 MHz)
 * ПК8020 Контур
 * Квант-8
 * Терминал ВК-8Т
+
+
+# Схема
+Лист.2 Моделированные сигналы синхронизатора
+![Screenshot](https://github.com/UncleJey/pk8020/blob/master/img/synchonyzer.png?raw=true)
